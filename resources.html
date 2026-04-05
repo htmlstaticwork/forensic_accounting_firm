@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/jpeg" href="https://images.unsplash.com/photo-1589829085413-56de8ae18c73?auto=format&fit=crop&q=80&w=32&h=32">
+    <title>Resources | Forensic Accounting</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- ==========================================
+         GLOBAL NAVBAR (Rule 32, 14, 26)
+         ========================================== -->
+    <header class="main-header">
+        <div class="container navbar">
+            <!-- logo (Rule 16: Clickable and redirect to Home) -->
+            <a href="index.html" class="brand-logo">
+                <img src="https://images.unsplash.com/photo-1589829085413-56de8ae18c73?auto=format&fit=crop&q=80&w=64&h=64" alt="Logo">
+                <span>TruthSeekers</span>
+            </a>
+
+            <!-- Desktop Menu -->
+            <ul class="nav-menu">
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle">Home <i class="fa-solid fa-chevron-down" style="font-size: 0.7rem; margin-left: 4px;"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="index.html">Home 1</a></li>
+                        <li><a href="home-2.html">Home 2</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="industries.html" class="nav-link">Industries</a></li>
+                <li><a href="case-studies.html" class="nav-link">Case Studies</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="resources.html" class="nav-link">Resources</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+                <li><a href="login.html" class="nav-link">Login</a></li>
+            </ul>
+
+            <div class="header-actions">
+                <!-- RTL toggle requested in related previous contexts but explicitly not in 49 list, I'll add if we want -->
+                <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Dark Mode">
+                    <i class="fa-solid fa-circle-half-stroke"></i>
+                </button>
+                <button id="rtl-toggle" class="theme-toggle-btn" aria-label="Toggle RTL Mode">
+                    <i class="fa-solid fa-language"></i>
+                </button>
+                <a href="contact.html" class="btn">Consultation</a>
+                
+                <button id="hamburger" class="hamburger" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Slide-in Menu -->
+    <div id="mobile-overlay" class="mobile-menu-overlay"></div>
+    <div id="mobile-nav" class="mobile-nav">
+        <ul class="nav-menu" style="display: flex; flex-direction: column; gap: 1rem;">
+            <li><a href="index.html" class="nav-link">Home 1</a></li>
+            <li><a href="home-2.html" class="nav-link">Home 2</a></li>
+            <li><a href="services.html" class="nav-link">Services</a></li>
+            <li><a href="industries.html" class="nav-link">Industries</a></li>
+            <li><a href="case-studies.html" class="nav-link">Case Studies</a></li>
+            <li><a href="about.html" class="nav-link">About</a></li>
+            <li><a href="resources.html" class="nav-link">Resources</a></li>
+            <li><a href="contact.html" class="nav-link">Contact</a></li>
+            <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+            <li><a href="login.html" class="nav-link">Login</a></li>
+            <li><a href="contact.html" class="btn" style="margin-top: 1rem; width: 100%;">Consultation</a></li>
+        </ul>
+    </div>  
+    
+    <!-- ==========================================
+         HERO SECTION (Standardized)
+         ========================================== -->
+    <section class="hero" style="min-height: 40vh; background-image: linear-gradient(rgba(10, 25, 47, 0.8), rgba(10, 25, 47, 0.9)), url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&q=80');">
+        <div class="container text-center">
+            <h1 style="color: #fff;">Knowledge Resources</h1>
+            <p>Expert insights, whitepapers, and the latest trends in forensic accounting.</p>
+        </div>
+    </section>
+
+    <!-- Whitepapers & Blog -->
+    <section class="bg-alt">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>Latest Insights</h2>
+                <p class="sub-text">Fraud Prevention Tips & Whitepapers</p>
+            </div>
+            <div class="card-grid">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="card-image-wrap" style="text-align: center; margin-bottom: 1.5rem;"><img src="img/fraud-trends.png" alt="2026 Fraud Trends" style="width: 100%; height: 240px; border-radius: 8px; object-fit: cover; margin-bottom: 1rem; margin: 0 auto; box-shadow: 0 4px 6px rgba(0,0,0,0.1);"></div>
+                        <h3 class="card-title">2026 Fraud Trends</h3>
+                        <p class="sub-text">Whitepaper</p>
+                        <p class="card-text">An in-depth analysis of emerging corporate vulnerabilities in remote-work environments.</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="btn btn-outline">Download PDF</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-body">
+                        <div class="card-image-wrap" style="text-align: center; margin-bottom: 1.5rem;"><img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=800" alt="Feature Image" style="width: 100%; height: 240px; border-radius: 8px; object-fit: cover; margin-bottom: 1rem; margin: 0 auto; box-shadow: 0 4px 6px rgba(0,0,0,0.1);"></div>
+                        <h3 class="card-title">Internal Controls Checklist</h3>
+                        <p class="sub-text">Blog / Guide</p>
+                        <p class="card-text">Step-by-step guide to fortifying your accounting department against internal embezzlement.</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="btn btn-outline">Read Article</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-body">
+                        <div class="card-image-wrap" style="text-align: center; margin-bottom: 1.5rem;"><img src="img/digital-assets.png" alt="Digital Asset Recovery" style="width: 100%; height: 240px; border-radius: 8px; object-fit: cover; margin-bottom: 1rem; margin: 0 auto; box-shadow: 0 4px 6px rgba(0,0,0,0.1);"></div>
+                        <h3 class="card-title">Digital Asset Recovery</h3>
+                        <p class="sub-text">Case Study Extract</p>
+                        <p class="card-text">Methodologies used by TruthSeekers to successfully trace missing cryptocurrency in divorce proceedings.</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="btn btn-outline">Read Article</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQs -->
+    <section>
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>Frequently Asked Questions</h2>
+            </div>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>When should I call a forensic accountant instead of an auditor?</span>
+                        <div class="faq-icon"></div>
+                    </button>
+                    <div class="faq-answer">
+                        <p class="sub-text">While traditional auditors verify compliance with GAAP, forensic accountants are specifically trained to look beyond the numbers to uncover hidden assets, fraud, and misrepresentation.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Is my consultation confidential?</span>
+                        <div class="faq-icon"></div>
+                    </button>
+                    <div class="faq-answer">
+                        <p class="sub-text">Absolutely. All discussions and materials provided are protected under strict confidentiality agreements, and frequently enveloped under attorney-client privilege when counsel retains us.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FRAUD PREVENTION TOOLKIT (Section 4) -->
+    <section class="bg-alt">
+        <div class="container text-center">
+            <div class="section-header">
+                <h2>Fraud Prevention Toolkit</h2>
+                <p class="sub-text">Downloadable assets to fortify your business immediately.</p>
+            </div>
+            <div style="display: flex; gap: 2rem; flex-wrap: wrap; justify-content: center;">
+                <div style="flex: 1; min-width: 250px; background: var(--bg-card); border: 1px solid var(--border-color); padding: 2rem; border-radius: 8px;">
+                    <i class="fa-solid fa-file-excel" style="font-size: 2.5rem; color: var(--secondary-color); margin-bottom: 1rem;"></i>
+                    <h4 style="margin-bottom: 0.5rem;">CFO Audit Matrix</h4>
+                    <p class="sub-text" style="font-size: 0.9rem;">Self-assessment tool for internal controls.</p>
+                    <a href="#" class="btn btn-outline" style="height: 36px; padding: 0 1rem; font-size: 0.85rem;">Download</a>
+                </div>
+                <div style="flex: 1; min-width: 250px; background: var(--bg-card); border: 1px solid var(--border-color); padding: 2rem; border-radius: 8px;">
+                    <i class="fa-solid fa-shield-virus" style="font-size: 2.5rem; color: var(--secondary-color); margin-bottom: 1rem;"></i>
+                    <h4 style="margin-bottom: 0.5rem;">Expense Fraud Guidelines</h4>
+                    <p class="sub-text" style="font-size: 0.9rem;">Policy templates for corporate mitigation.</p>
+                    <a href="#" class="btn btn-outline" style="height: 36px; padding: 0 1rem; font-size: 0.85rem;">Download</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INDUSTRY GLOSSARY (Section 5) -->
+    <section>
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>Forensic Glossary</h2>
+                <p class="sub-text">Understanding the language of financial litigation.</p>
+            </div>
+            <div style="max-width: 800px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                <div>
+                    <h4 style="color: var(--primary-color);">Benford's Law</h4>
+                    <p class="sub-text" style="font-size: 0.9rem;">A mathematical principle used to detect anomalies in naturally occurring data sets, frequently used to spot fake invoices.</p>
+                </div>
+                <div>
+                    <h4 style="color: var(--primary-color);">Asset Dissipation</h4>
+                    <p class="sub-text" style="font-size: 0.9rem;">The intentional squandering or hiding of marital or corporate assets to prevent distribution during litigation.</p>
+                </div>
+                <div>
+                    <h4 style="color: var(--primary-color);">Kiting</h4>
+                    <p class="sub-text" style="font-size: 0.9rem;">A form of check fraud involving the leveraging of the float time between banks to create false balances.</p>
+                </div>
+                <div>
+                    <h4 style="color: var(--primary-color);">Kovel Agreement</h4>
+                    <p class="sub-text" style="font-size: 0.9rem;">An arrangement extending attorney-client privilege to the retained forensic accountant.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- UPCOMING WEBINARS (Section 6) -->
+    <section class="bg-alt">
+        <div class="container text-center">
+            <div class="section-header">
+                <h2>Upcoming Webinars</h2>
+            </div>
+            <div style="background: var(--primary-color); border-radius: 8px; padding: 3rem; color: #fff; display: flex; flex-wrap: wrap; gap: 2rem; align-items: center; justify-content: space-between; text-align: left;">
+                <div style="flex: 1; min-width: 250px;">
+                    <span style="background: var(--secondary-color); color: var(--primary-color); padding: 0.25rem 0.5rem; font-size: 0.8rem; font-weight: 700; border-radius: 4px; margin-bottom: 1rem; display: inline-block;">MARCH 30, 2026</span>
+                    <h3 style="color: #fff; margin-bottom: 0.5rem;">Defending Against Post-Acquisition Disputes</h3>
+                    <p style="color: #cbd5e1; margin-bottom: 0;">Learn how forensic analysis neutralizes inflated earn-out claims.</p>
+                </div>
+                <div>
+                    <a href="#" class="btn" style="background-color: var(--secondary-color); color: var(--primary-color);">Register Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="global-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Branding -->
+                <div class="footer-brand">
+                    <a href="index.html" class="footer-logo">
+                        <img src="https://images.unsplash.com/photo-1589829085413-56de8ae18c73?auto=format&fit=crop&q=80&w=64&h=64" alt="Logo">
+                        <span>TruthSeekers</span>
+                    </a>
+                    <p class="footer-text">Premier forensic accounting firm dedicated to uncovering truth in complex financial matters.</p>
+                    <!-- Social Links (Rule 7) -->
+                    <div class="social-links">
+                        <a href="#" aria-label="LinkedIn"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn" style="width:20px;"></a>
+                        <a href="#" aria-label="Twitter"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/twitter/twitter-original.svg" alt="Twitter" style="width:20px;"></a>
+                        <a href="#" aria-label="Facebook"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/facebook/facebook-original.svg" alt="Facebook" style="width:20px;"></a>
+                    </div>
+                </div>
+
+                <!-- Navigation -->
+                <div>
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="industries.html">Industries Served</a></li>
+                        <li><a href="case-studies.html">Case Studies</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div>
+                    <h4 class="footer-heading">Specialties</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html">Fraud Investigation</a></li>
+                        <li><a href="services.html">Litigation Support</a></li>
+                        <li><a href="services.html">Asset Tracing</a></li>
+                        <li><a href="services.html">Business Valuation</a></li>
+                        <li><a href="services.html">Insurance Claims</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div class="footer-contact">
+                    <h4 class="footer-heading">Contact Us</h4>
+                    <p><i class="fa-solid fa-location-dot" style="color:var(--secondary-color); margin-right: 10px;"></i> 123 Financial District, Suite 500<br>New York, NY 10005</p>
+                    <p><i class="fa-solid fa-phone" style="color:var(--secondary-color); margin-right: 10px;"></i> (800) 555-0199</p>
+                    <p><i class="fa-solid fa-envelope" style="color:var(--secondary-color); margin-right: 10px;"></i> consult@truthseekers.com</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 TruthSeekers Forensic Accounting. All Rights Reserved. | <a href="#" style="color:var(--text-light); text-decoration: underline;">Privacy Policy</a></p>
+            </div>
+        </div>
+    </footer>
+    <button id="back-to-top" class="back-to-top" aria-label="Back to Top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+    <script src="js/script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

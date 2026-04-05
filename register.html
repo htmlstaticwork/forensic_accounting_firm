@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/jpeg" href="https://images.unsplash.com/photo-1589829085413-56de8ae18c73?auto=format&fit=crop&q=80&w=32&h=32">
+    <title>Register | TruthSeekers Portal</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="login-page">
+
+    <div class="auth-controls">
+        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Dark Mode">
+            <i class="fa-solid fa-circle-half-stroke"></i>
+        </button>
+        <button id="rtl-toggle" class="theme-toggle-btn" aria-label="Toggle RTL Mode">
+            <i class="fa-solid fa-language"></i>
+        </button>
+    </div>
+
+    <div class="login-card">
+        <div class="login-header">
+            <a href="index.html" class="brand-logo" style="justify-content: center; margin-bottom: 0.5rem;">
+                <img src="https://images.unsplash.com/photo-1589829085413-56de8ae18c73?auto=format&fit=crop&q=80&w=64&h=64" alt="Logo">
+                <span>TruthSeekers</span>
+            </a>
+            <h2>Create Your Account</h2>
+        </div>
+
+        <div class="social-login-grid">
+            <button class="social-btn google">
+                <i class="fa-brands fa-google"></i> Google
+            </button>
+            <button class="social-btn linkedin">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn" style="width:20px; filter: brightness(0) invert(1);"> LinkedIn
+            </button>
+        </div>
+
+        <div class="login-divider">OR</div>
+
+        <form action="dashboard.html" method="GET">
+            <div class="form-group">
+                <label for="fullname">Full Name</label>
+                <input type="text" id="fullname" required placeholder="John Doe">
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" required placeholder="name@company.com">
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" required placeholder="••••••••">
+            </div>
+            <div class="form-group">
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" id="confirm-password" required placeholder="••••••••">
+            </div>
+            
+            <div style="margin-bottom: 1.5rem; font-size: 0.9rem;">
+                <label style="display: flex; align-items: flex-start; gap: 0.5rem; cursor: pointer; color: var(--text-sub);">
+                    <input type="checkbox" required style="margin-top: 0.2rem;"> 
+                    <span>I agree to the <a href="#" style="color: var(--secondary-color);">Terms of Service</a> and <a href="#" style="color: var(--secondary-color);">Privacy Policy</a>.</span>
+                </label>
+            </div>
+
+            <button type="submit" class="btn" style="width: 100%;">Create Account</button>
+        </form>
+
+        <div style="text-align: center; margin-top: 1.5rem; font-size: 0.95rem; color: var(--text-sub);">
+            Already have an account? <a href="login.html" style="color: var(--secondary-color); font-weight: 600;">Sign In</a>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,124 @@
+body.login-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bg-color);
+    padding: 2rem 1rem; /* Added padding for mobile scroll buffer */
+}
+
+.login-card {
+    background-color: var(--bg-card);
+    padding: 3rem;
+    border-radius: 8px;
+    box-shadow: var(--shadow-lg);
+    width: 100%;
+    max-width: 450px;
+    border: 1px solid var(--border-color);
+    text-align: center;
+}
+
+/* Rule 21 & 22: Logo centered internally */
+.login-header {
+    margin-bottom: 2rem;
+}
+.login-header .brand-logo {
+    display: inline-flex;
+    justify-content: center;
+    color: var(--primary-color);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+.form-group input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    transition: var(--transition);
+}
+.form-group input:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+}
+
+/* Password Toggle Support */
+.password-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.password-wrapper input {
+    padding-right: 3rem; /* Space for icon */
+}
+
+.toggle-password {
+    position: absolute;
+    right: 1rem;
+    cursor: pointer;
+    color: var(--text-sub);
+    transition: var(--transition);
+    user-select: none;
+    z-index: 10;
+}
+
+.toggle-password:hover {
+    color: var(--secondary-color);
+}
+
+/* Rule 28: Standardized social login */
+.social-login-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+.social-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    background: transparent;
+    cursor: pointer;
+    transition: var(--transition);
+    font-weight: 500;
+    color: var(--text-main);
+}
+.social-btn:hover {
+    background: var(--bg-color);
+}
+.social-btn.google { color: #DB4437; border-color: #DB4437; }
+.social-btn.linkedin { color: #0077b5; border-color: #0077b5; }
+.social-btn:hover { color: #fff; }
+.social-btn.google:hover { background: #DB4437; }
+.social-btn.linkedin:hover { background: #0077b5; }
+
+.login-divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 1.5rem 0;
+    color: var(--text-sub);
+}
+.login-divider::before, .login-divider::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid var(--border-color);
+}
+.login-divider:not(:empty)::before { margin-right: .5em; }
+.login-divider:not(:empty)::after { margin-left: .5em; }

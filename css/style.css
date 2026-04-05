@@ -1,0 +1,993 @@
+/* =========================================================================
+   FORENSIC ACCOUNTING FIRM - GLOBAL STYLES
+   ========================================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* --- CSS Variables (Light Theme Baseline) --- */
+:root {
+  --primary-color: #0A192F; /* Deep Navy professional */
+  --secondary-color: #D4AF37; /* Trust Gold */
+  --secondary-color-hover: #b9982f;
+  
+  --bg-color: #f8fafc;
+  --bg-alt: #ffffff;
+  --bg-card: #ffffff;
+  
+  --text-main: #1e293b;
+  --text-sub: #475569; /* Small text & sub text contrast */
+  --text-light: #ffffff; /* Typically against primary bg */
+  
+  --border-color: #e2e8f0;
+  
+  --nav-height-desktop: 70px; /* Rule 32: 60-80px desktop */
+  --nav-height-mobile: 60px; /* Rule 32: 56-64px mobile */
+  
+  --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+  --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+  --shadow-lg: 0 10px 15px rgba(0,0,0,0.1);
+  --shadow-card: 0 4px 12px rgba(0,0,0,0.05); /* Rule 6: Distinguishable card background */
+  
+  --font-base: 'Inter', sans-serif;
+  
+  --h1-size: 2.5rem;
+  --h2-size: 2.125rem;
+  --h3-size: 1.75rem;
+  --h4-size: 1.25rem;
+  
+  --container-max: 1280px;
+}
+
+/* --- Dark Theme Toggle Variables --- */
+[data-theme="dark"] {
+  --bg-color: #0f172a;
+  --bg-alt: #1e293b;
+  --bg-card: #1e293b;
+  --text-main: #f8fafc;
+  --text-sub: #cbd5e1;
+  --border-color: #334155;
+  --shadow-card: 0 4px 12px rgba(0,0,0,0.5); /* Much darker shadow to define edge */
+}
+
+/* =========================================================================
+   BASE STYLES & RESET
+   ========================================================================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-base);
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  line-height: 1.6;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  overflow-x: hidden;
+}
+
+/* Rule 41: Consistent H1, H2, H3, H4 */
+h1, h2, h3, h4 {
+  font-family: var(--font-base);
+  color: var(--primary-color);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+[data-theme="dark"] h1, [data-theme="dark"] h2, [data-theme="dark"] h3, [data-theme="dark"] h4 {
+  color: #fff;
+}
+h1 { font-size: var(--h1-size); }
+h2 { font-size: var(--h2-size); font-weight: 600; line-height: 1.3; }
+h3 { font-size: var(--h3-size); font-weight: 600; line-height: 1.4; }
+h4 { font-size: var(--h4-size); font-weight: 600; line-height: 1.5; }
+
+/* Rule 42 & 43: increased contrast for sub/small text */
+p, .sub-text, .card-text small {
+  color: var(--text-sub);
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: var(--transition);
+}
+
+img {
+  max-width: 100%;
+  border-radius: 8px;
+  display: block;
+}
+
+/* RTL Support Wrapper */
+[dir="rtl"] {
+  text-align: right;
+  direction: rtl;
+}
+
+[dir="rtl"] .brand-logo {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .nav-link.active::after {
+  left: auto;
+  right: 0;
+}
+
+[dir="rtl"] .header-actions {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .hero {
+  text-align: right;
+}
+
+[dir="rtl"] .card {
+  text-align: right;
+}
+
+[dir="rtl"] .card-icon {
+  justify-content: flex-start;
+}
+
+[dir="rtl"] .footer-links a:hover {
+  padding-left: 0;
+  padding-right: 5px;
+}
+
+[dir="rtl"] .social-links {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .mobile-nav {
+  left: auto;
+  right: -280px;
+}
+
+[dir="rtl"] .mobile-nav.active {
+  right: 0;
+  left: auto;
+}
+
+/* Back to Top Button */
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background-color: var(--secondary-color);
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: var(--shadow-lg);
+  opacity: 0;
+  visibility: hidden;
+  transition: var(--transition);
+  z-index: 999;
+  border: none;
+}
+
+.back-to-top.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.back-to-top:hover {
+  background-color: var(--secondary-color-hover);
+  transform: translateY(-5px);
+}
+
+[dir="rtl"] .back-to-top {
+  right: auto;
+  left: 30px;
+}
+
+/* =========================================================================
+   LAYOUT CLASSES
+   ========================================================================= */
+.container {
+  width: 90%;
+  max-width: var(--container-max);
+  margin: 0 auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-center p, .text-center .sub-text {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+section {
+  padding: 5rem 0;
+}
+
+section.bg-alt {
+  background-color: var(--bg-alt);
+}
+
+/* Typography Utilities */
+.text-center { text-align: center; }
+.section-header {
+  margin-bottom: 3.5rem;
+}
+
+/* =========================================================================
+   BUTTONS (Rule 5, 23, 34)
+   ========================================================================= */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: var(--secondary-color);
+  color: #fff;
+  padding: 0 1.5rem;
+  height: 48px; /* Standard proportional size (Rule 5 & 10) */
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.btn:hover {
+  background-color: var(--secondary-color-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-outline {
+  background-color: transparent;
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+}
+[data-theme="dark"] .btn-outline {
+  border-color: #fff;
+  color: #fff;
+}
+.btn-outline:hover {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+[data-theme="dark"] .btn-outline:hover {
+  background-color: #fff;
+  color: var(--primary-color);
+}
+
+/* Rule 31 & 45: Ensure outline buttons are visible in hero sections */
+.hero .btn-outline {
+  border-color: #fff;
+  color: #fff;
+}
+
+.hero .btn-outline:hover {
+  background-color: #fff;
+  color: var(--primary-color);
+}
+
+.btn-nav {
+  height: 42px;
+  padding: 0 1.25rem;
+  font-size: 0.95rem;
+}
+
+.btn-nav-outline {
+  background-color: transparent;
+  border: 2px solid var(--secondary-color);
+  color: var(--secondary-color);
+}
+
+.btn-nav-outline:hover {
+  background-color: var(--secondary-color);
+  color: #fff;
+}
+
+/* =========================================================================
+   GLOBAL HEADER / NAVBAR
+   ========================================================================= */
+/* Rule 15: prevent vertical scrollbar overlap by ensuring main isn't 100vh pushing content. Header is fixed. */
+.main-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--nav-height-desktop); /* Rule 32 */
+  background-color: var(--bg-card);
+  box-shadow: var(--shadow-sm);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+/* Logos (Rules 2, 3) */
+.brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+[data-theme="dark"] .brand-logo {
+  color: #fff;
+}
+.brand-logo img {
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.brand-icon-small {
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* Nav Links Menu */
+.nav-menu {
+  display: flex;
+  align-items: stretch;
+  list-style: none;
+  gap: 1rem; /* Reduced to fit larger menu on medium screens */
+  height: 100%;
+}
+
+.nav-menu li {
+  display: flex;
+  align-items: center;
+}
+
+/* Nav Links */
+.nav-link {
+  font-weight: 500;
+  color: var(--text-main);
+  position: relative;
+  padding: 0.5rem 0;
+}
+
+.nav-link:hover, .nav-link.active {
+  color: var(--secondary-color); /* Rule 12 & 33 */
+}
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--secondary-color);
+}
+
+/* Dropdown Menu (Rule 26 & 27) */
+.nav-item.dropdown {
+  position: relative;
+}
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0; /* Aligned exactly under parent */
+  background-color: var(--bg-card);
+  min-width: 200px;
+  box-shadow: var(--shadow-md);
+  opacity: 0;
+  visibility: hidden;
+  transition: var(--transition);
+  border-radius: 4px;
+  padding: 0.5rem 0;
+  display: flex;
+  flex-direction: column;
+}
+.nav-item.dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  top: 100%;
+}
+.nav-item.active .nav-link {
+  color: var(--secondary-color);
+}
+.nav-item.active .nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--secondary-color);
+}
+[dir="rtl"] .nav-item.active .nav-link::after {
+  left: auto;
+  right: 0;
+}
+.dropdown-menu li a {
+  padding: 0.75rem 1.5rem;
+  display: block;
+  color: var(--text-main);
+}
+.dropdown-menu li a:hover {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+/* Header Utilities */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.theme-toggle-btn {
+  background: none;
+  border: none;
+  color: var(--text-main);
+  font-size: 1.25rem;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+/* Mobile Hamburger (Rule 14) */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+.hamburger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: var(--primary-color);
+  transition: var(--transition);
+}
+[data-theme="dark"] .hamburger span {
+  background-color: #fff;
+}
+
+/* Overlay for Mobile Menu */
+.mobile-menu-overlay {
+  position: fixed;
+  top: var(--nav-height-mobile);
+  left: -100%;
+  width: 100%;
+  height: calc(100vh - var(--nav-height-mobile));
+  background: rgba(0,0,0,0.5);
+  z-index: 998;
+  transition: var(--transition);
+  opacity: 0;
+  visibility: hidden;
+}
+.mobile-menu-overlay.active {
+  left: 0;
+  opacity: 1;
+  visibility: visible;
+}
+
+.mobile-nav {
+  position: fixed;
+  top: var(--nav-height-mobile);
+  left: -280px; /* Slide from left */
+  width: 280px;
+  height: calc(100vh - var(--nav-height-mobile));
+  background-color: var(--bg-card);
+  padding: 2rem 1.5rem;
+  z-index: 999;
+  transition: var(--transition);
+  overflow-y: auto;
+  box-shadow: var(--shadow-lg);
+}
+.mobile-nav.active {
+  left: 0;
+}
+.mobile-nav .nav-menu {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+/* Adding Padding to body to offset fixed header */
+body {
+  padding-top: var(--nav-height-desktop);
+}
+
+/* =========================================================================
+   GLOBAL FOOTER (Rule 9, 36)
+   ========================================================================= */
+/* Global Footer (Rule 2: Vibrant colors, dark modes) */
+.global-footer {
+  background-color: #070f1a; /* Deeper navy for visual hierarchy */
+  color: var(--text-light);
+  padding: 5rem 0 2rem;
+  border-top: 3px solid var(--secondary-color); /* Distinct separation from content above */
+  box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.4);
+  position: relative;
+  z-index: 10;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+/* Rule 3 & 35: Same brand font sizes/colors where applicable */
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.footer-logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.footer-logo img {
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.footer-text {
+  color: #cbd5e1;
+  font-size: 0.95rem;
+}
+
+.footer-heading {
+  color: #fff;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+/* Rule 36: Hovering effect color clearly visible */
+.footer-links a {
+  color: #cbd5e1;
+  transition: var(--transition);
+}
+.footer-links a:hover {
+  color: var(--secondary-color);
+  padding-left: 5px;
+}
+
+/* Sub text contrast */
+.footer-contact p {
+  color: #cbd5e1;
+  margin-bottom: 0.5rem;
+}
+
+/* Social Media (Rule 7: Hover effects, NO empty placeholders) */
+.social-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(255,255,255,0.1);
+  color: #fff;
+  transition: var(--transition);
+}
+.social-links a:hover {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  transform: translateY(-3px);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  color: #94a3b8;
+  font-size: 0.875rem;
+}
+
+/* Rule 25: Balanced Card Layouts (2x2 or 4 in a row) */
+.final-cta {
+  background: linear-gradient(135deg, var(--primary-color) 0%, #1e293b 100%);
+  color: #fff;
+  padding: 5rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  position: relative;
+  overflow: hidden;
+}
+
+.final-cta::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 70% 30%, rgba(212, 175, 55, 0.05) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+/* Rule 25: Balanced Card Layouts (2x2 or 4 in a row) */
+
+/* Rule 25: Balanced Card Layouts (2x2 or 4 in a row) */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Default 3 for balanced look */
+  gap: 2rem;
+}
+
+@media (max-width: 1024px) {
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  /* Center the last card if it's the 3rd one in a 2-column grid */
+  #services-preview .card-grid .card:last-child:nth-child(odd),
+  #testimonials .card-grid .card:last-child:nth-child(odd),
+  #problem-solution .card-grid .card:last-child:nth-child(odd),
+  #core-values .card-grid .card:last-child:nth-child(odd) {
+    grid-column: 1 / span 2;
+    justify-self: center;
+    width: 100%;
+    max-width: 500px; /* Optional: cap width so it doesn't look too stretched */
+  }
+}
+@media (max-width: 640px) {
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+  #services-preview .card-grid .card:last-child:nth-child(odd),
+  #testimonials .card-grid .card:last-child:nth-child(odd),
+  #problem-solution .card-grid .card:last-child:nth-child(odd) {
+    grid-column: auto;
+    max-width: none;
+  }
+}
+
+/* Rule 6: Distinguishable card background */
+.card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color); /* Extra definition */
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: var(--shadow-card);
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Ensures equal height */
+}
+
+.card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-5px);
+}
+
+/* Rule 24: Links inside cards misaligned; align properly. Rule 8: CTA horizontal line */
+.card-body {
+  flex-grow: 1; /* Pushes footer/CTA to bottom */
+  display: flex;
+  flex-direction: column;
+  text-align: center; /* Generally centering content is requested often (Rule 46 & 24) */
+}
+
+.card-icon {
+  font-size: 2.5rem;
+  color: var(--secondary-color);
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.card-title {
+  color: var(--primary-color);
+}
+
+/* The space above CTA is managed here */
+.card-footer {
+  margin-top: auto;
+  padding-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+/* Team Member Cards (Rule 44: compact size) */
+.team-card {
+  padding: 1.5rem;
+}
+.team-card img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 0 auto 1rem;
+}
+
+
+/* HERO SECTION (Rule 31: Centered H1, equal spacing. Rule 45: Image bg) */
+.hero {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  background-image: linear-gradient(rgba(10, 25, 47, 0.8), rgba(10, 25, 47, 0.9)), url('https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&q=80');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #ffffff;
+  padding: 5rem 0; /* Equal spacing above and below */
+}
+
+/* Overriding heading for hero */
+.hero h1 {
+  color: #fff;
+  margin: 0 auto 1.5rem;
+  max-width: 800px;
+}
+.hero p {
+  color: #cbd5e1;
+  font-size: 1.25rem;
+  margin: 0 auto 2.5rem;
+  max-width: 600px;
+}
+
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+#team-grid {
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+/* Tablet Centering for 4th card (Rule 20 & 25) 
+   At 768px - 992px, 3 columns usually fit. We center the 4th card. */
+@media (min-width: 768px) and (max-width: 992px) {
+  #team-grid .card:last-child:nth-child(4) {
+    grid-column: 2; /* Middle column of 3 */
+  }
+}
+
+/* =========================================================================
+   MEDIA QUERIES
+   ========================================================================= */
+@media (max-width: 1150px) {
+  body {
+    padding-top: var(--nav-height-mobile);
+  }
+  .main-header {
+    height: var(--nav-height-mobile);
+  }
+  
+  .nav-menu {
+    display: none; /* Hide main menu */
+  }
+  
+  .header-actions .btn {
+    display: none; /* Hide top CTA on mobile */
+  }
+  
+  .hamburger {
+    display: flex;
+  }
+  
+  :root {
+    --h1-size: 2rem;
+    --h2-size: 1.75rem;
+    --h3-size: 1.5rem;
+  }
+  
+  .hero {
+    min-height: 60vh;
+  }
+}
+
+/* Page Specific Fixes */
+#sector-success-grid {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+@media (max-width: 400px) {
+  #sector-success-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* FAQ Accordion Styles */
+.faq-container {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.faq-item {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: var(--transition);
+}
+
+.faq-item:hover {
+  border-color: var(--secondary-color);
+  box-shadow: var(--shadow-md);
+}
+
+.faq-question {
+  width: 100%;
+  padding: 1.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font-family: var(--font-base);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  transition: var(--transition);
+}
+
+[data-theme="dark"] .faq-question {
+  color: #fff;
+}
+
+.faq-icon {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.faq-icon::before,
+.faq-icon::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 2px;
+  background-color: var(--secondary-color);
+  transform: translate(-50%, -50%);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.faq-icon::after {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.faq-item.active .faq-icon {
+  transform: rotate(180deg);
+}
+
+.faq-item.active .faq-icon::after {
+  opacity: 0;
+  transform: translate(-50%, -50%) rotate(0deg);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), padding 0.4s ease;
+  padding: 0 2rem;
+}
+
+.faq-item.active .faq-answer {
+  max-height: 500px; /* Sufficient height for content */
+  padding: 0 2rem 1.5rem;
+}
+
+.faq-answer p {
+  margin-bottom: 0;
+  padding-top: 0.5rem;
+}
+
+/* ==============================================
+   EMERGENCY BOX (Contact Page)
+   ============================================== */
+.emergency-box {
+    background: var(--primary-color);
+    border-radius: 8px;
+    padding: 4rem;
+    color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4rem;
+    align-items: center;
+}
+
+.emergency-box h2 {
+    color: #fff;
+}
+
+.emergency-box p {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Auth Controls (Floating Toggles) */
+.auth-controls {
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    display: flex;
+    gap: 1rem;
+    z-index: 1000;
+}
+
+@media (max-width: 768px) {
+    .auth-controls {
+        top: 1rem;
+        right: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .emergency-box {
+        padding: 3rem;
+        gap: 3rem;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .emergency-box {
+        padding: 1.5rem;
+        gap: 2rem;
+    }
+    
+    .emergency-box h2 {
+        font-size: 1.75rem;
+    }
+    
+    .emergency-box .btn {
+        width: 100%;
+        display: inline-block;
+    }
+}

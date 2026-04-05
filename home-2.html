@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/jpeg" href="https://images.unsplash.com/photo-1589829085413-56de8ae18c73?auto=format&fit=crop&q=80&w=32&h=32">
+    <title>Forensic Accounting | Marketing Landing Page</title>
+    <meta name="description" content="Start your case review today. Expert forensic accounting, fraud investigation, and litigation support.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- GLOBAL NAVBAR -->
+    <header class="main-header">
+        <div class="container navbar">
+            <a href="index.html" class="brand-logo">
+                <img src="https://images.unsplash.com/photo-1589829085413-56de8ae18c73?auto=format&fit=crop&q=80&w=64&h=64" alt="Logo">
+                <span>TruthSeekers</span>
+            </a>
+
+            <ul class="nav-menu">
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle">Home <i class="fa-solid fa-chevron-down" style="font-size: 0.7rem; margin-left: 4px;"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="index.html">Home 1</a></li>
+                        <li><a href="home-2.html">Home 2</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="industries.html" class="nav-link">Industries</a></li>
+                <li><a href="case-studies.html" class="nav-link">Case Studies</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="resources.html" class="nav-link">Resources</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+                <li><a href="login.html" class="btn btn-outline btn-nav">Login</a></li>
+            </ul>
+
+            <div class="header-actions">
+                <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Dark Mode">
+                    <i class="fa-solid fa-circle-half-stroke"></i>
+                </button>
+                <button id="rtl-toggle" class="theme-toggle-btn" aria-label="Toggle RTL Mode">
+                    <i class="fa-solid fa-language"></i>
+                </button>
+                <a href="contact.html" class="btn">Consultation</a>
+                <button id="hamburger" class="hamburger" aria-label="Menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div id="mobile-overlay" class="mobile-menu-overlay"></div>
+    <div id="mobile-nav" class="mobile-nav">
+        <!-- Content will be handled by JS to clone or can remain simple here to avoid repetition, included directly for offline vanilla use -->
+        <ul class="nav-menu" style="display: flex; flex-direction: column; gap: 1rem;">
+            <li><a href="index.html" class="nav-link">Home 1</a></li>
+            <li><a href="home-2.html" class="nav-link">Home 2</a></li>
+            <li><a href="services.html" class="nav-link">Services</a></li>
+            <li><a href="industries.html" class="nav-link">Industries</a></li>
+            <li><a href="case-studies.html" class="nav-link">Case Studies</a></li>
+            <li><a href="about.html" class="nav-link">About</a></li>
+            <li><a href="resources.html" class="nav-link">Resources</a></li>
+            <li><a href="contact.html" class="nav-link">Contact</a></li>
+            <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+            <li><a href="login.html" class="btn btn-outline btn-nav" style="width: 100%;">Login</a></li>
+            <li><a href="contact.html" class="btn" style="margin-top: 1rem; width: 100%;">Consultation</a></li>
+        </ul>
+    </div>
+
+    <!-- FULL SCREEN VIDEO HERO (Using an image overlay representation) -->
+    <section class="hero" style="min-height: 100vh; background-image: linear-gradient(rgba(10, 25, 47, 0.7), rgba(10, 25, 47, 0.9)), url('https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&q=80');">
+        <div class="container text-center">
+            <h1 style="font-size: 4rem;">Exposing the Truth Behind the Numbers</h1>
+            <p>From corporate embezzlement to hidden assets, we provide the evidence you need to secure your financial future.</p>
+            <div class="hero-actions" style="margin-top: 2rem;">
+                <a href="#lead-form" class="btn" style="font-size: 1.25rem; height: 60px; padding: 0 2rem;">Start Your Case Review</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROBLEM-SOLUTION SECTION -->
+    <section id="problem-solution" class="bg-alt">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>Facing Complex Financial Disputes?</h2>
+                <p class="sub-text">Identify and resolve critical financial vulnerabilities before they destroy your business.</p>
+            </div>
+            <div class="card-grid">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="card-image-wrap" style="text-align: center; margin-bottom: 1.5rem;"><img src="img/fraud.png" alt="Financial Fraud" style="width: 100%; height: 240px; border-radius: 8px; object-fit: cover; margin-bottom: 1rem; margin: 0 auto; box-shadow: 0 4px 6px rgba(0,0,0,0.1);"></div>
+                        <h3 class="card-title">Financial Fraud</h3>
+                        <p class="card-text">We uncover complex accounting irregularities that indicate systemic fraud.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <div class="card-image-wrap" style="text-align: center; margin-bottom: 1.5rem;"><img src="img/embezzlement.png" alt="Embezzlement" style="width: 100%; height: 240px; border-radius: 8px; object-fit: cover; margin-bottom: 1rem; margin: 0 auto; box-shadow: 0 4px 6px rgba(0,0,0,0.1);"></div>
+                        <h3 class="card-title">Embezzlement</h3>
+                        <p class="card-text">Identifying internal theft through rigorous analysis of electronic trails.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <div class="card-image-wrap" style="text-align: center; margin-bottom: 1.5rem;"><img src="img/hidden_assets.png" alt="Hidden Assets" style="width: 100%; height: 240px; border-radius: 8px; object-fit: cover; margin-bottom: 1rem; margin: 0 auto; box-shadow: 0 4px 6px rgba(0,0,0,0.1);"></div>
+                        <h3 class="card-title">Hidden Assets</h3>
+                        <p class="card-text">Tracing assets across international jurisdictions during divorce or litigation.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ENGAGEMENT PROCESS -->
+    <section id="process">
+        <div class="container text-center">
+            <div class="section-header">
+                <h2>Our Proven Process</h2>
+                <p class="sub-text">A strategic, four-step approach to securing undeniable evidence.</p>
+            </div>
+            <div style="display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap;">
+                <div style="flex: 1; min-width: 200px; padding: 2rem; background: var(--bg-card); border-radius: 8px; box-shadow: var(--shadow-sm);">
+                    <h1 style="color: var(--secondary-color); font-size: 4rem;">1</h1>
+                    <h4 style="margin-bottom: 0.5rem;">Consultation</h4>
+                    <p class="sub-text">Confidential case assessment.</p>
+                </div>
+                <div style="flex: 1; min-width: 200px; padding: 2rem; background: var(--bg-card); border-radius: 8px; box-shadow: var(--shadow-sm);">
+                    <h1 style="color: var(--secondary-color); font-size: 4rem;">2</h1>
+                    <h4 style="margin-bottom: 0.5rem;">Investigation</h4>
+                    <p class="sub-text">Deep dive into financial records.</p>
+                </div>
+                <div style="flex: 1; min-width: 200px; padding: 2rem; background: var(--bg-card); border-radius: 8px; box-shadow: var(--shadow-sm);">
+                    <h1 style="color: var(--secondary-color); font-size: 4rem;">3</h1>
+                    <h4 style="margin-bottom: 0.5rem;">Reporting</h4>
+                    <p class="sub-text">Clear, court-ready documentation.</p>
+                </div>
+                <div style="flex: 1; min-width: 200px; padding: 2rem; background: var(--bg-card); border-radius: 8px; box-shadow: var(--shadow-sm);">
+                    <h1 style="color: var(--secondary-color); font-size: 4rem;">4</h1>
+                    <h4 style="margin-bottom: 0.5rem;">Court Support</h4>
+                    <p class="sub-text">Expert testimony to win your case.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LEAD CAPTURE SECTION -->
+    <section id="lead-form" class="bg-alt" style="padding: 6rem 0;">
+        <div class="container" style="display: flex; flex-wrap: wrap; gap: 4rem; align-items: center;">
+            <div style="flex: 1; min-width: 300px;">
+                <h2>Let's Discuss Your Case Confidentially</h2>
+                <p class="sub-text" style="font-size: 1.1rem; margin-bottom: 2rem;">Time is critical when financial integrity is compromised. Submit your details for a secure consultation within 24 hours.</p>
+                <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+                    <i class="fa-solid fa-lock" style="color:var(--secondary-color); font-size: 1.5rem;"></i>
+                    <h4 style="margin:0;">100% Confidential & Secure</h4>
+                </div>
+            </div>
+            <div style="flex: 1; min-width: 300px; background: var(--bg-card); padding: 3rem; border-radius: 8px; box-shadow: var(--shadow-lg); border: 1px solid var(--border-color);">
+                <form action="#" method="POST" style="display: flex; flex-direction: column; gap: 1.5rem;">
+                    <div>
+                        <label for="name" style="display:block; margin-bottom: 0.5rem; font-weight: 600;">Full Name</label>
+                        <input type="text" id="name" style="width: 100%; padding: 0.75rem; border: 1px solid var(--border-color); border-radius: 4px; background: var(--bg-color); color: var(--text-main);" required>
+                    </div>
+                    <div>
+                        <label for="company" style="display:block; margin-bottom: 0.5rem; font-weight: 600;">Company</label>
+                        <input type="text" id="company" style="width: 100%; padding: 0.75rem; border: 1px solid var(--border-color); border-radius: 4px; background: var(--bg-color); color: var(--text-main);">
+                    </div>
+                    <div>
+                        <label for="caseType" style="display:block; margin-bottom: 0.5rem; font-weight: 600;">Case Type</label>
+                        <select id="caseType" style="width: 100%; padding: 0.75rem; border: 1px solid var(--border-color); border-radius: 4px; background: var(--bg-color); color: var(--text-main);">
+                            <option>Fraud Investigation</option>
+                            <option>Litigation Support</option>
+                            <option>Asset Tracing</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="urgency" style="display:block; margin-bottom: 0.5rem; font-weight: 600;">Urgency</label>
+                        <select id="urgency" style="width: 100%; padding: 0.75rem; border: 1px solid var(--border-color); border-radius: 4px; background: var(--bg-color); color: var(--text-main);">
+                            <option>Immediate (1-2 Days)</option>
+                            <option>High (1 Week)</option>
+                            <option>Medium (Planning Phase)</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn" style="width: 100%;">Book Confidential Consultation</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- CASE STUDY HIGHLIGHTS (Section 5) -->
+    <section id="case-studies-preview" style="padding: 5rem 0;">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>Proven Results in High-Stakes Cases</h2>
+                <p class="sub-text">Real-world summaries of our investigative impact.</p>
+            </div>
+            <div class="card-grid">
+                <!-- Case 1 -->
+                <div class="card" style="flex-direction: column; gap: 1rem; align-items: flex-start; padding: 1.5rem;">
+                    <div style="flex: 1;">
+                        <h3 style="color:var(--primary-color); margin-bottom: 0.5rem; font-size: 1.25rem;">$4.2M Embezzlement Recovered</h3>
+                        <p class="sub-text">Uncovered a sophisticated 5-year invoicing scheme within a manufacturing firm. </p>
+                        <a href="case-studies.html" style="color:var(--secondary-color); font-weight: 600;">Read Case Study &rarr;</a>
+                    </div>
+                </div>
+                <!-- Case 2 -->
+                <div class="card" style="flex-direction: column; gap: 1rem; align-items: flex-start; padding: 1.5rem;">
+                    <div style="flex: 1;">
+                        <h3 style="color:var(--primary-color); margin-bottom: 0.5rem; font-size: 1.25rem;">Offshore Assets Seized</h3>
+                        <p class="sub-text">Traced complex cryptocurrency transactions to physical assets in three offshore jurisdictions during a shareholder dispute.</p>
+                        <a href="case-studies.html" style="color:var(--secondary-color); font-weight: 600;">Read Case Study &rarr;</a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center" style="margin-top: 3rem;">
+                <a href="case-studies.html" class="btn btn-outline">View All Precedents</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINAL CTA SECTION (Section 6) -->
+    <section class="final-cta" style="text-align: center;">
+        <div class="container">
+            <h2 style="color: #fff;">Don't Wait Until Evidence Disappears</h2>
+            <p style="color: #cbd5e1; max-width: 600px; margin: 0 auto 2rem;">Engage our specialized forensic team before electronic trails go cold or assets are moved beyond recovery.</p>
+            <a href="contact.html" class="btn btn-secondary">Contact Our Lead Investigator</a>
+        </div>
+    </section>
+
+    <!-- GLOBAL FOOTER -->
+    <footer class="global-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="footer-logo">
+                        <img src="https://images.unsplash.com/photo-1589829085413-56de8ae18c73?auto=format&fit=crop&q=80&w=64&h=64" alt="Logo">
+                        <span>TruthSeekers</span>
+                    </a>
+                    <p class="footer-text">Premier forensic accounting firm dedicated to uncovering truth in complex financial matters.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="LinkedIn"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn" style="width:20px;"></a>
+                        <a href="#" aria-label="Twitter"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/twitter/twitter-original.svg" alt="Twitter" style="width:20px;"></a>
+                        <a href="#" aria-label="Facebook"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/facebook/facebook-original.svg" alt="Facebook" style="width:20px;"></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="industries.html">Industries Served</a></li>
+                        <li><a href="case-studies.html">Case Studies</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-heading">Specialties</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html">Fraud Investigation</a></li>
+                        <li><a href="services.html">Litigation Support</a></li>
+                        <li><a href="services.html">Asset Tracing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4 class="footer-heading">Contact Us</h4>
+                    <p><i class="fa-solid fa-location-dot" style="color:var(--secondary-color); margin-right: 10px;"></i> 123 Financial District, Suite 500<br>New York, NY 10005</p>
+                    <p><i class="fa-solid fa-phone" style="color:var(--secondary-color); margin-right: 10px;"></i> (800) 555-0199</p>
+                    <p><i class="fa-solid fa-envelope" style="color:var(--secondary-color); margin-right: 10px;"></i> consult@truthseekers.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 TruthSeekers Forensic Accounting. All Rights Reserved. | <a href="#" style="color:var(--text-light); text-decoration: underline;">Privacy Policy</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <button id="back-to-top" class="back-to-top" aria-label="Back to Top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+    <script src="js/script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

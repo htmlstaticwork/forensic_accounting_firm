@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/jpeg" href="https://images.unsplash.com/photo-1589829085413-56de8ae18c73?auto=format&fit=crop&q=80&w=32&h=32">
+    <title>Contact Us | Forensic Accounting</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+     <!-- ==========================================
+         GLOBAL NAVBAR (Rule 32, 14, 26)
+         ========================================== -->
+    <header class="main-header">
+        <div class="container navbar">
+            <!-- logo (Rule 16: Clickable and redirect to Home) -->
+            <a href="index.html" class="brand-logo">
+                <img src="https://images.unsplash.com/photo-1589829085413-56de8ae18c73?auto=format&fit=crop&q=80&w=64&h=64" alt="Logo">
+                <span>TruthSeekers</span>
+            </a>
+
+            <!-- Desktop Menu -->
+            <ul class="nav-menu">
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle">Home <i class="fa-solid fa-chevron-down" style="font-size: 0.7rem; margin-left: 4px;"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="index.html">Home 1</a></li>
+                        <li><a href="home-2.html">Home 2</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="industries.html" class="nav-link">Industries</a></li>
+                <li><a href="case-studies.html" class="nav-link">Case Studies</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="resources.html" class="nav-link">Resources</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+                <li><a href="login.html" class="btn btn-outline btn-nav">Login</a></li>
+            </ul>
+
+            <div class="header-actions">
+                <!-- RTL toggle requested in related previous contexts but explicitly not in 49 list, I'll add if we want -->
+                <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Dark Mode">
+                    <i class="fa-solid fa-circle-half-stroke"></i>
+                </button>
+                <button id="rtl-toggle" class="theme-toggle-btn" aria-label="Toggle RTL Mode">
+                    <i class="fa-solid fa-language"></i>
+                </button>
+                <a href="contact.html" class="btn">Consultation</a>
+                
+                <button id="hamburger" class="hamburger" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Slide-in Menu -->
+    <div id="mobile-overlay" class="mobile-menu-overlay"></div>
+    <div id="mobile-nav" class="mobile-nav">
+        <ul class="nav-menu" style="display: flex; flex-direction: column; gap: 1rem;">
+            <li><a href="index.html" class="nav-link">Home 1</a></li>
+            <li><a href="home-2.html" class="nav-link">Home 2</a></li>
+            <li><a href="services.html" class="nav-link">Services</a></li>
+            <li><a href="industries.html" class="nav-link">Industries</a></li>
+            <li><a href="case-studies.html" class="nav-link">Case Studies</a></li>
+            <li><a href="about.html" class="nav-link">About</a></li>
+            <li><a href="resources.html" class="nav-link">Resources</a></li>
+            <li><a href="contact.html" class="nav-link">Contact</a></li>
+            <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+            <li><a href="login.html" class="btn btn-outline btn-nav" style="width: 100%;">Login</a></li>
+            <li><a href="contact.html" class="btn" style="margin-top: 1rem; width: 100%;">Consultation</a></li>
+        </ul>
+    </div>
+
+
+    <section class="hero" style="min-height: 40vh; background-image: linear-gradient(rgba(10, 25, 47, 0.8), rgba(10, 25, 47, 0.9)), url('https://images.unsplash.com/photo-1590402494587-44b71d7772f6?auto=format&fit=crop&q=80');">
+        <div class="container text-center">
+            <h1>Contact Us</h1>
+            <p>Secure, confidential consultation for your critical financial matters.</p>
+        </div>
+    </section>
+
+    <section class="bg-alt">
+        <div class="container">
+            <div style="display: flex; flex-wrap: wrap; gap: 4rem;">
+                <!-- Contact Info -->
+                <div style="flex: 1; min-width: 300px;">
+                    <div class="text-center" style="margin-bottom: 2rem;">
+                        <h2>Get In Touch</h2>
+                        <p class="sub-text">Our experts are available to discuss your case with complete confidentiality.</p>
+                    </div>
+                    
+                    <div style="margin-top: 2rem; display:flex; flex-direction:column; gap:1.5rem;">
+                        <div style="display:flex; gap:1rem; align-items:center;">
+                            <div style="width:50px; height:50px; background:var(--primary-color); color:#fff; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:1.25rem;">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4>Phone</h4>
+                                <p class="sub-text" style="margin:0;">(800) 555-0199</p>
+                            </div>
+                        </div>
+
+                        <div style="display:flex; gap:1rem; align-items:center;">
+                            <div style="width:50px; height:50px; background:var(--primary-color); color:#fff; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:1.25rem;">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4>Email</h4>
+                                <p class="sub-text" style="margin:0;">consult@truthseekers.com</p>
+                            </div>
+                        </div>
+
+                        <div style="display:flex; gap:1rem; align-items:center;">
+                            <div style="width:50px; height:50px; background:var(--primary-color); color:#fff; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:1.25rem;">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <h4>Office Location</h4>
+                                <p class="sub-text" style="margin:0;">123 Financial District, Suite 500<br>New York, NY 10005</p>
+                            </div>
+                        </div>
+
+                        <div style="display:flex; gap:1rem; align-items:center;">
+                            <div style="width:50px; height:50px; background:var(--secondary-color); color:var(--primary-color); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:1.25rem;">
+                                <i class="fa-solid fa-truck-medical"></i>
+                            </div>
+                            <div>
+                                <h4>Emergency Case Contact</h4>
+                                <p class="sub-text" style="margin:0;">Available 24/7 for injunctions and asset freezes.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form -->
+                <div style="flex: 1; min-width: 300px; background: var(--bg-card); padding: 3rem; border-radius: 8px; box-shadow: var(--shadow-lg); border: 1px solid var(--border-color);">
+                    <h3 class="text-center" style="margin-bottom: 2rem;">Request Consultation</h3>
+                    <form action="#" method="POST" style="display: flex; flex-direction: column; gap: 1.5rem;">
+                        <div>
+                            <label style="display:block; margin-bottom:0.5rem; font-weight:600;">Name</label>
+                            <input type="text" style="width:100%; padding:0.75rem; border:1px solid var(--border-color); border-radius:4px; background:var(--bg-color); color:var(--text-main);" required>
+                        </div>
+                        <div>
+                            <label style="display:block; margin-bottom:0.5rem; font-weight:600;">Email</label>
+                            <input type="email" style="width:100%; padding:0.75rem; border:1px solid var(--border-color); border-radius:4px; background:var(--bg-color); color:var(--text-main);" required>
+                        </div>
+                        <div>
+                            <label style="display:block; margin-bottom:0.5rem; font-weight:600;">Message (Do not include sensitive financial data)</label>
+                            <textarea rows="5" style="width:100%; padding:0.75rem; border:1px solid var(--border-color); border-radius:4px; background:var(--bg-color); color:var(--text-main); font-family:inherit;" required></textarea>
+                        </div>
+                        <button type="submit" class="btn" style="width:100%;">Submit Request</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- OFFICE LOCATIONS MAP (Section 3) -->
+    <section>
+        <div class="container text-center">
+            <div class="section-header">
+                <h2>Our Locations</h2>
+                <p class="sub-text">Headquartered in New York, actively operating nationwide.</p>
+            </div>
+            <!-- Placeholder for map -->
+            <div style="width: 100%; height: 400px; background-color: var(--border-color); border-radius: 8px; display: flex; align-items: center; justify-content: center; box-shadow: var(--shadow-sm);">
+                <div style="text-align: center; color: var(--text-sub);">
+                    <i class="fa-solid fa-map-location-dot" style="font-size: 3rem; margin-bottom: 1rem;"></i>
+                    <p>Interactive Map Component</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EMERGENCY RESPONSE (Section 4) -->
+    <section class="bg-alt">
+        <div class="container">
+            <div class="emergency-box">
+                <div style="flex: 1; min-width: 300px;">
+                    <h2>Emergency Injunction Support</h2>
+                    <p>If you require immediate evidence preservation or are filing for a temporary restraining order (TRO) to freeze assets, our Rapid Response Asset Team is available 24/7/365.</p>
+                    <a href="tel:8005550199" class="btn" style="background-color: var(--secondary-color); color: var(--primary-color); margin-top: 1rem;"><i class="fa-solid fa-phone" style="margin-right: 8px;"></i> Call Emergency Line</a>
+                </div>
+                <div style="flex: 1; text-align: center;">
+                    <img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&q=80&w=150&h=150" alt="Feature Image" style="width: 150px; height: 150px; border-radius: 12px; object-fit: cover; box-shadow: 0 10px 15px rgba(0,0,0,0.2); margin: 0 auto;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECURE FILE UPLOAD INFO (Section 5) -->
+    <section>
+        <div class="container text-center">
+            <div class="section-header">
+                <h2>Secure Client Data Protocol</h2>
+            </div>
+            <p class="sub-text" style="max-width: 800px; margin: 0 auto 2rem;">Do not send sensitive financial documents, raw ledger data, or potentially privileged communications through unsolicited email. If you are a prospective client requiring document review for an intake assessment, please request a secure upload link from our compliance team.</p>
+            <a href="login.html" class="btn btn-outline">Existing Clients: Login to Vault</a>
+        </div>
+    </section>
+
+    <!-- WHAT HAPPENS NEXT (Section 6) -->
+    <section class="bg-alt">
+        <div class="container text-center">
+            <div class="section-header">
+                <h2>What Happens After You Contact Us?</h2>
+            </div>
+            <div style="display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap;">
+                <div style="flex: 1; min-width: 250px; background: var(--bg-card); padding: 2rem; border-radius: 8px; box-shadow: var(--shadow-sm);">
+                    <h3 style="color: var(--secondary-color);">Hour 1 - 24</h3>
+                    <p class="sub-text">Conflict of interest check completed and preliminary secure consultation scheduled with a Managing Partner.</p>
+                </div>
+                <div style="flex: 1; min-width: 250px; background: var(--bg-card); padding: 2rem; border-radius: 8px; box-shadow: var(--shadow-sm);">
+                    <h3 style="color: var(--secondary-color);">Day 2 - 3</h3>
+                    <p class="sub-text">Execution of NDA and/or Kovel Agreement via counsel. Secure portal instantiated for initial document transfer.</p>
+                </div>
+                <div style="flex: 1; min-width: 250px; background: var(--bg-card); padding: 2rem; border-radius: 8px; box-shadow: var(--shadow-sm);">
+                    <h3 style="color: var(--secondary-color);">Day 4 - 7</h3>
+                    <p class="sub-text">Strategic Assessment delivered detailing the recommended investigative scope, timeline, and estimated budget.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="global-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Branding -->
+                <div class="footer-brand">
+                    <a href="index.html" class="footer-logo">
+                        <img src="https://images.unsplash.com/photo-1589829085413-56de8ae18c73?auto=format&fit=crop&q=80&w=64&h=64" alt="Logo">
+                        <span>TruthSeekers</span>
+                    </a>
+                    <p class="footer-text">Premier forensic accounting firm dedicated to uncovering truth in complex financial matters.</p>
+                    <!-- Social Links (Rule 7) -->
+                    <div class="social-links">
+                        <a href="#" aria-label="LinkedIn"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn" style="width:20px;"></a>
+                        <a href="#" aria-label="Twitter"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/twitter/twitter-original.svg" alt="Twitter" style="width:20px;"></a>
+                        <a href="#" aria-label="Facebook"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/facebook/facebook-original.svg" alt="Facebook" style="width:20px;"></a>
+                    </div>
+                </div>
+
+                <!-- Navigation -->
+                <div>
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="industries.html">Industries Served</a></li>
+                        <li><a href="case-studies.html">Case Studies</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div>
+                    <h4 class="footer-heading">Specialties</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html">Fraud Investigation</a></li>
+                        <li><a href="services.html">Litigation Support</a></li>
+                        <li><a href="services.html">Asset Tracing</a></li>
+                        <li><a href="services.html">Business Valuation</a></li>
+                        <li><a href="services.html">Insurance Claims</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div class="footer-contact">
+                    <h4 class="footer-heading">Contact Us</h4>
+                    <p><i class="fa-solid fa-location-dot" style="color:var(--secondary-color); margin-right: 10px;"></i> 123 Financial District, Suite 500<br>New York, NY 10005</p>
+                    <p><i class="fa-solid fa-phone" style="color:var(--secondary-color); margin-right: 10px;"></i> (800) 555-0199</p>
+                    <p><i class="fa-solid fa-envelope" style="color:var(--secondary-color); margin-right: 10px;"></i> consult@truthseekers.com</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 TruthSeekers Forensic Accounting. All Rights Reserved. | <a href="#" style="color:var(--text-light); text-decoration: underline;">Privacy Policy</a></p>
+            </div>
+        </div>
+    </footer>
+    <button id="back-to-top" class="back-to-top" aria-label="Back to Top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+    <script src="js/script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/jpeg" href="https://images.unsplash.com/photo-1589829085413-56de8ae18c73?auto=format&fit=crop&q=80&w=32&h=32">
+    <title>About Us | Forensic Accounting</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+     <!-- ==========================================
+         GLOBAL NAVBAR (Rule 32, 14, 26)
+         ========================================== -->
+    <header class="main-header">
+        <div class="container navbar">
+            <!-- logo (Rule 16: Clickable and redirect to Home) -->
+            <a href="index.html" class="brand-logo">
+                <img src="https://images.unsplash.com/photo-1589829085413-56de8ae18c73?auto=format&fit=crop&q=80&w=64&h=64" alt="Logo">
+                <span>TruthSeekers</span>
+            </a>
+
+            <!-- Desktop Menu -->
+            <ul class="nav-menu">
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle">Home <i class="fa-solid fa-chevron-down" style="font-size: 0.7rem; margin-left: 4px;"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="index.html">Home 1</a></li>
+                        <li><a href="home-2.html">Home 2</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="industries.html" class="nav-link">Industries</a></li>
+                <li><a href="case-studies.html" class="nav-link">Case Studies</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="resources.html" class="nav-link">Resources</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+                <li><a href="login.html" class="btn btn-outline btn-nav">Login</a></li>
+            </ul>
+
+            <div class="header-actions">
+                <!-- RTL toggle requested in related previous contexts but explicitly not in 49 list, I'll add if we want -->
+                <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Dark Mode">
+                    <i class="fa-solid fa-circle-half-stroke"></i>
+                </button>
+                <button id="rtl-toggle" class="theme-toggle-btn" aria-label="Toggle RTL Mode">
+                    <i class="fa-solid fa-language"></i>
+                </button>
+                <a href="contact.html" class="btn">Consultation</a>
+                
+                <button id="hamburger" class="hamburger" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Slide-in Menu -->
+    <div id="mobile-overlay" class="mobile-menu-overlay"></div>
+    <div id="mobile-nav" class="mobile-nav">
+        <ul class="nav-menu" style="display: flex; flex-direction: column; gap: 1rem;">
+            <li><a href="index.html" class="nav-link">Home 1</a></li>
+            <li><a href="home-2.html" class="nav-link">Home 2</a></li>
+            <li><a href="services.html" class="nav-link">Services</a></li>
+            <li><a href="industries.html" class="nav-link">Industries</a></li>
+            <li><a href="case-studies.html" class="nav-link">Case Studies</a></li>
+            <li><a href="about.html" class="nav-link">About</a></li>
+            <li><a href="resources.html" class="nav-link">Resources</a></li>
+            <li><a href="contact.html" class="nav-link">Contact</a></li>
+            <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+            <li><a href="login.html" class="nav-link">Login</a></li>
+            <li><a href="contact.html" class="btn" style="margin-top: 1rem; width: 100%;">Consultation</a></li>
+        </ul>
+    </div>
+    
+    <!-- ==========================================
+         HERO SECTION (Rule 31, 45)
+         ========================================== -->
+    <section class="hero" style="min-height: 40vh; background-image: linear-gradient(rgba(10, 25, 47, 0.8), rgba(10, 25, 47, 0.9)), url('https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&q=80');">
+        <div class="container text-center">
+            <h1 style="color: #fff;">About TruthSeekers</h1>
+            <p>Our history, our ethics, and our commitment to financial integrity.</p>
+        </div>
+    </section>
+
+    <!-- Overview & Ethics -->
+    <section class="bg-alt">
+        <div class="container">
+            <div style="display: flex; flex-wrap: wrap; gap: 4rem; align-items: center;">
+                <div style="flex: 1; min-width: 300px;">
+                    <h2 class="text-center">Firm Overview</h2>
+                    <p>Founded in 1998, TruthSeekers has established itself as the preeminent boutique firm specializing exclusively in forensic accounting, business valuation, and litigation support.</p>
+                    <p>We distinctively do not perform traditional tax or compliance auditing. This singular focus ensures our analytical models and investigative techniques are uncompromised and cutting-edge.</p>
+                    <br>
+                    <h2 class="text-center">Ethics & Confidentiality</h2>
+                    <p>Trust is our primary asset. Every investigation is conducted within strict ethical boundaries, adhering to the standards set by the AICPA and ACFE.</p>
+                </div>
+                <!-- Image vertically aligned w text -->
+                <div style="flex: 1; min-width: 300px;">
+                    <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80" alt="Corporate Boardroom" style="box-shadow: var(--shadow-lg);">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Expert Team (Rule 44: Compact Size) -->
+    <section>
+        <div class="container text-center">
+            <div class="section-header">
+                <h2>Our Expert Team</h2>
+                <p class="sub-text">Certified Professionals (CPA, CFE, ABV)</p>
+            </div>
+            <!-- Smaller team cards -->
+            <div id="team-grid" class="card-grid">
+                <div class="card team-card">
+                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80" alt="Team Member">
+                    <h4 style="margin-bottom: 0.25rem;">Robert Hughes</h4>
+                    <p class="sub-text" style="font-size: 0.85rem; margin-bottom: 0;">Managing Partner, CPA, CFE</p>
+                </div>
+                <div class="card team-card">
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80" alt="Team Member">
+                    <h4 style="margin-bottom: 0.25rem;">Sarah Jenkins</h4>
+                    <p class="sub-text" style="font-size: 0.85rem; margin-bottom: 0;">Lead Investigator, CFE</p>
+                </div>
+                <div class="card team-card">
+                    <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80" alt="Team Member">
+                    <h4 style="margin-bottom: 0.25rem;">Michael Ross</h4>
+                    <p class="sub-text" style="font-size: 0.85rem; margin-bottom: 0;">Valuation Expert, CPA, ABV</p>
+                </div>
+                <div class="card team-card">
+                    <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80" alt="Team Member">
+                    <h4 style="margin-bottom: 0.25rem;">Elena Rostova</h4>
+                    <p class="sub-text" style="font-size: 0.85rem; margin-bottom: 0;">Cyber-Forensics Director</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FIRM HISTORY & MILESTONES (Section 4) -->
+    <section class="bg-alt">
+        <div class="container text-center">
+            <div class="section-header">
+                <h2>Our History</h2>
+                <p class="sub-text">Nearly three decades of resolving complex financial disputes.</p>
+            </div>
+            <div style="display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap;">
+                <div style="flex: 1; min-width: 200px; padding: 1.5rem; border-right: 2px solid var(--border-color);">
+                    <h3 style="color: var(--secondary-color);">1998</h3>
+                    <p class="sub-text">Firm Founded in NYC</p>
+                </div>
+                <div style="flex: 1; min-width: 200px; padding: 1.5rem; border-right: 2px solid var(--border-color);">
+                    <h3 style="color: var(--secondary-color);">2010</h3>
+                    <p class="sub-text">Launched Cyber-Forensics Division</p>
+                </div>
+                <div style="flex: 1; min-width: 200px; padding: 1.5rem;">
+                    <h3 style="color: var(--secondary-color);">2025</h3>
+                    <p class="sub-text">Surpassed $3B in Disputed Funds Analyzed</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CORE VALUES (Section 5) -->
+    <section id="core-values">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>Our Core Values</h2>
+            </div>
+            <div class="card-grid">
+                <div class="card" style="text-align: center; padding: 2rem;">
+                    <img src="https://images.unsplash.com/photo-1589829085413-56de8ae18c73?auto=format&fit=crop&q=80&w=64&h=64" alt="Logo" class="brand-icon-small" style="margin-right: 8px;">
+                    <h3>Absolute Objectivity</h3>
+                    <p class="sub-text">We are advocates for the truth. Our analysis remains unbiased and deeply rooted in factual data.</p>
+                </div>
+                <div class="card" style="text-align: center; padding: 2rem;">
+                    <i class="fa-solid fa-user-secret" style="font-size: 2.5rem; color: var(--secondary-color); margin-bottom: 1rem;"></i>
+                    <h3>Impenetrable Discretion</h3>
+                    <p class="sub-text">We operate with the highest level of confidentiality to protect our clients' systemic reputations.</p>
+                </div>
+                <div class="card" style="text-align: center; padding: 2rem;">
+                    <i class="fa-solid fa-microscope" style="font-size: 2.5rem; color: var(--secondary-color); margin-bottom: 1rem;"></i>
+                    <h3>Relentless Detail</h3>
+                    <p class="sub-text">Forensics is about precision. We leave no ledger unturned and no digital footprint unexamined.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- JOIN OUR TEAM / CTA (Section 6) -->
+    <section class="final-cta">
+        <div class="container" style="display: flex; gap: 4rem; align-items: center; justify-content: space-between; flex-wrap: wrap;">
+            <div style="flex: 1; min-width: 300px;">
+                <h2 style="color: #fff; margin-bottom: 1rem;">Join The TruthSeekers</h2>
+                <p style="color: #cbd5e1; margin-bottom: 0;">We are always looking for elite CPAs, CFEs, and Data Scientists. If you possess a relentless drive for uncovering the truth, view our openings.</p>
+            </div>
+            <div>
+                <a href="contact.html" class="btn" style="background-color: #fff; color: var(--primary-color);">View Careers</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="global-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Branding -->
+                <div class="footer-brand">
+                    <a href="index.html" class="footer-logo">
+                        <img src="https://images.unsplash.com/photo-1589829085413-56de8ae18c73?auto=format&fit=crop&q=80&w=64&h=64" alt="Logo">
+                        <span>TruthSeekers</span>
+                    </a>
+                    <p class="footer-text">Premier forensic accounting firm dedicated to uncovering truth in complex financial matters.</p>
+                    <!-- Social Links (Rule 7) -->
+                    <div class="social-links">
+                        <a href="#" aria-label="LinkedIn"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn" style="width:20px;"></a>
+                        <a href="#" aria-label="Twitter"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/twitter/twitter-original.svg" alt="Twitter" style="width:20px;"></a>
+                        <a href="#" aria-label="Facebook"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/facebook/facebook-original.svg" alt="Facebook" style="width:20px;"></a>
+                    </div>
+                </div>
+
+                <!-- Navigation -->
+                <div>
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="industries.html">Industries Served</a></li>
+                        <li><a href="case-studies.html">Case Studies</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div>
+                    <h4 class="footer-heading">Specialties</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html">Fraud Investigation</a></li>
+                        <li><a href="services.html">Litigation Support</a></li>
+                        <li><a href="services.html">Asset Tracing</a></li>
+                        <li><a href="services.html">Business Valuation</a></li>
+                        <li><a href="services.html">Insurance Claims</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div class="footer-contact">
+                    <h4 class="footer-heading">Contact Us</h4>
+                    <p><i class="fa-solid fa-location-dot" style="color:var(--secondary-color); margin-right: 10px;"></i> 123 Financial District, Suite 500<br>New York, NY 10005</p>
+                    <p><i class="fa-solid fa-phone" style="color:var(--secondary-color); margin-right: 10px;"></i> (800) 555-0199</p>
+                    <p><i class="fa-solid fa-envelope" style="color:var(--secondary-color); margin-right: 10px;"></i> consult@truthseekers.com</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 TruthSeekers Forensic Accounting. All Rights Reserved. | <a href="#" style="color:var(--text-light); text-decoration: underline;">Privacy Policy</a></p>
+            </div>
+        </div>
+    </footer>
+    <button id="back-to-top" class="back-to-top" aria-label="Back to Top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+    <script src="js/script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
