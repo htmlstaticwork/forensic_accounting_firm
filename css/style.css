@@ -330,10 +330,7 @@ section.bg-alt {
   gap: 0.5rem;
   font-size: 1.5rem;
   font-weight: 700;
-  color: var(--primary-color);
-}
-[data-theme="dark"] .brand-logo {
-  color: #fff;
+  color: var(--secondary-color);
 }
 .brand-logo img {
   height: 32px;
@@ -430,7 +427,8 @@ section.bg-alt {
   display: block;
   color: var(--text-main);
 }
-.dropdown-menu li a:hover {
+.dropdown-menu li a:hover,
+.dropdown-menu li a.active {
   background-color: var(--primary-color);
   color: #fff;
 }
@@ -523,7 +521,7 @@ body {
    ========================================================================= */
 /* Global Footer (Rule 2: Vibrant colors, dark modes) */
 .global-footer {
-  background-color: #070f1a; /* Deeper navy for visual hierarchy */
+  background-color: var(--primary-color);
   color: var(--text-light);
   padding: 5rem 0 2rem;
   border-top: 3px solid var(--secondary-color); /* Distinct separation from content above */
@@ -548,7 +546,7 @@ body {
 .footer-logo {
   font-size: 1.5rem;
   font-weight: 700;
-  color: #fff;
+  color: var(--secondary-color);
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -628,12 +626,14 @@ body {
 /* Rule 25: Balanced Card Layouts (2x2 or 4 in a row) */
 .final-cta {
   background: linear-gradient(135deg, var(--primary-color) 0%, #1e293b 100%);
-  color: #fff;
   padding: 5rem 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
   position: relative;
   overflow: hidden;
+  color: #fff;
 }
+.final-cta h2 { color: #fff; }
+.final-cta p, .final-cta .sub-text { color: #cbd5e1; }
 
 .final-cta::after {
   content: '';

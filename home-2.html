@@ -20,11 +20,11 @@
             </a>
 
             <ul class="nav-menu">
-                <li class="nav-item dropdown">
+                <li class="nav-item dropdown active">
                     <a href="#" class="nav-link dropdown-toggle">Home <i class="fa-solid fa-chevron-down" style="font-size: 0.7rem; margin-left: 4px;"></i></a>
                     <ul class="dropdown-menu">
                         <li><a href="index.html">Home 1</a></li>
-                        <li><a href="home-2.html">Home 2</a></li>
+                        <li><a href="home-2.html" class="active">Home 2</a></li>
                     </ul>
                 </li>
 
@@ -58,7 +58,7 @@
         <!-- Content will be handled by JS to clone or can remain simple here to avoid repetition, included directly for offline vanilla use -->
         <ul class="nav-menu" style="display: flex; flex-direction: column; gap: 1rem;">
             <li><a href="index.html" class="nav-link">Home 1</a></li>
-            <li><a href="home-2.html" class="nav-link">Home 2</a></li>
+            <li><a href="home-2.html" class="nav-link active">Home 2</a></li>
             <li><a href="services.html" class="nav-link">Services</a></li>
             <li><a href="industries.html" class="nav-link">Industries</a></li>
             <li><a href="case-studies.html" class="nav-link">Case Studies</a></li>
@@ -215,6 +215,14 @@
                         <a href="case-studies.html" style="color:var(--secondary-color); font-weight: 600;">Read Case Study &rarr;</a>
                     </div>
                 </div>
+                <!-- Case 3 -->
+                <div class="card" style="flex-direction: column; gap: 1rem; align-items: flex-start; padding: 1.5rem;">
+                    <div style="flex: 1;">
+                        <h3 style="color:var(--primary-color); margin-bottom: 0.5rem; font-size: 1.25rem;">Partnership Shareholder Dispute</h3>
+                        <p class="sub-text">Re-calculated business valuation following suppressed revenues by managing partner, securing an equitable $15M buyout.</p>
+                        <a href="case-studies.html" style="color:var(--secondary-color); font-weight: 600;">Read Case Study &rarr;</a>
+                    </div>
+                </div>
             </div>
             <div class="text-center" style="margin-top: 3rem;">
                 <a href="case-studies.html" class="btn btn-outline">View All Precedents</a>
@@ -225,8 +233,8 @@
     <!-- FINAL CTA SECTION (Section 6) -->
     <section class="final-cta" style="text-align: center;">
         <div class="container">
-            <h2 style="color: #fff;">Don't Wait Until Evidence Disappears</h2>
-            <p style="color: #cbd5e1; max-width: 600px; margin: 0 auto 2rem;">Engage our specialized forensic team before electronic trails go cold or assets are moved beyond recovery.</p>
+            <h2 style="margin-bottom: 1.5rem;">Don't Wait Until Evidence Disappears</h2>
+            <p style="max-width: 600px; margin: 0 auto 2rem;">Engage our specialized forensic team before electronic trails go cold or assets are moved beyond recovery.</p>
             <a href="contact.html" class="btn btn-secondary">Contact Our Lead Investigator</a>
         </div>
     </section>

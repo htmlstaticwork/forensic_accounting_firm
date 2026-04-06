@@ -35,7 +35,8 @@ body.dashboard-page {
     border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 .sidebar-header .brand-logo {
-    color: #fff;
+    display: flex;
+    align-items: center;
 }
 
 .sidebar-nav {
