@@ -236,7 +236,7 @@ section.bg-alt {
   justify-content: center;
   gap: 0.5rem;
   background-color: var(--secondary-color);
-  color: #fff;
+  color: var(--primary-color);
   padding: 0 1.5rem;
   height: 48px; /* Standard proportional size (Rule 5 & 10) */
   border-radius: 4px;
@@ -750,7 +750,7 @@ body {
   justify-content: center;
   text-align: center;
   position: relative;
-  background-image: linear-gradient(rgba(10, 25, 47, 0.8), rgba(10, 25, 47, 0.9)), url('https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&q=80');
+  background-image: linear-gradient(rgba(10, 25, 47, 0.8), rgba(10, 25, 47, 0.9)), url('../img/hero_bg.png');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;

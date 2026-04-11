@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="img/logo.png">
+    <title>Secure Documents | TruthSeekers Portal</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="dashboard-page">
+
+    <!-- Dashboard Sidebar -->
+    <aside class="dashboard-sidebar" id="dashboard-sidebar">
+        <div class="sidebar-header">
+            <a href="index.html" class="brand-logo" style="margin: 0;">
+                <img src="img/logo.png" alt="Logo">
+                <span>TruthSeekers</span>
+            </a>
+        </div>
+        
+        <nav class="sidebar-nav">
+            <a href="dashboard.html" class="sidebar-link"><i class="fa-solid fa-gauge"></i> Overview</a>
+            <a href="dashboard-cases.html" class="sidebar-link"><i class="fa-solid fa-folder-open"></i> Cases</a>
+            <a href="dashboard-documents.html" class="sidebar-link active"><i class="fa-solid fa-file-invoice"></i> Documents</a>
+            <a href="dashboard-messages.html" class="sidebar-link"><i class="fa-solid fa-message"></i> Messages <span style="background:var(--secondary-color); color:var(--primary-color); border-radius:50%; width:20px; height:20px; display:inline-flex; align-items:center; justify-content:center; font-size:12px; font-weight:700; margin-left:auto;">2</span></a>
+            <a href="dashboard-settings.html" class="sidebar-link"><i class="fa-solid fa-gear"></i> Settings</a>
+        </nav>
+        
+        <div class="sidebar-footer">
+            <a href="index.html" class="sidebar-link" style="padding: 0; color: #f87171;"><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a>
+        </div>
+    </aside>
+
+    <div class="dashboard-main">
+        <!-- Dashboard Header -->
+        <header class="dashboard-header">
+            <div style="display: flex; align-items: center; gap: 1rem;">
+                <button id="mobile-sidebar-toggle" class="mobile-sidebar-toggle"><i class="fa-solid fa-bars"></i></button>
+                <h3 style="margin:0;">Secure Document Vault</h3>
+            </div>
+            
+            <div style="display: flex; align-items: center; gap: 1rem;">
+                <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Dark Mode" style="font-size: 1.25rem; background:none; border:none; cursor:pointer; color:var(--text-main);">
+                    <i class="fa-solid fa-circle-half-stroke"></i>
+                </button>
+                <button id="rtl-toggle" class="theme-toggle-btn" aria-label="Toggle RTL Mode" style="font-size: 1.25rem; background:none; border:none; cursor:pointer; color:var(--text-main);">
+                    <i class="fa-solid fa-language"></i>
+                </button>
+                
+                <div style="width: 40px; height: 40px; border-radius: 50%; background: var(--secondary-color); color: var(--primary-color); display: flex; align-items: center; justify-content: center; font-weight: 700;">JD</div>
+            </div>
+        </header>
+
+        <!-- Dashboard Content -->
+        <main class="dashboard-content container" style="max-width: 100%; width:100%; margin:0;">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 2rem; flex-wrap:wrap; gap:1rem;">
+                <div>
+                    <h2>Case Files & Evidence</h2>
+                    <p class="sub-text">All uploads are secured with 256-bit encryption.</p>
+                </div>
+                <button class="btn"><i class="fa-solid fa-cloud-arrow-up" style="margin-right:8px;"></i> Upload Secure File</button>
+            </div>
+
+            <!-- Folders Overview -->
+            <div class="card-grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); margin-bottom: 2rem;">
+                <div class="card" style="padding: 1rem; display:flex; gap:1rem; align-items:center; cursor:pointer; border: 1px solid var(--secondary-color);">
+                    <i class="fa-solid fa-folder" style="font-size:2rem; color:var(--secondary-color);"></i>
+                    <div>
+                        <h4 style="margin:0; font-size:1rem;">Case #TS-9942</h4>
+                        <p class="sub-text" style="font-size:0.8rem; margin:0;">12 Items</p>
+                    </div>
+                </div>
+                <div class="card" style="padding: 1rem; display:flex; gap:1rem; align-items:center; cursor:pointer;">
+                    <i class="fa-solid fa-folder" style="font-size:2rem; color:var(--text-sub);"></i>
+                    <div>
+                        <h4 style="margin:0; font-size:1rem;">Archived Cases</h4>
+                        <p class="sub-text" style="font-size:0.8rem; margin:0;">45 Items</p>
+                    </div>
+                </div>
+                <div class="card" style="padding: 1rem; display:flex; gap:1rem; align-items:center; cursor:pointer;">
+                    <i class="fa-solid fa-folder" style="font-size:2rem; color:var(--text-sub);"></i>
+                    <div>
+                        <h4 style="margin:0; font-size:1rem;">Firm Reports</h4>
+                        <p class="sub-text" style="font-size:0.8rem; margin:0;">3 Items</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Current Folder Context -->
+            <h3 style="margin-bottom: 1rem;">Recent Uploads: <span style="font-weight:400; color:var(--text-sub);">Case #TS-9942</span></h3>
+
+            <div class="document-list">
+                <!-- Doc 1 -->
+                <div class="document-item">
+                    <div class="document-info">
+                        <i class="fa-solid fa-file-pdf" style="font-size:1.5rem; color:#ef4444;"></i>
+                        <div>
+                            <h4 style="margin:0; font-size:1rem;">Q3_Ledger_Extract_Encrypted.pdf</h4>
+                            <p class="sub-text" style="font-size:0.85rem; margin:0;">Uploaded by Sarah Jenkins • Oct 24, 2026 • 2.4 MB</p>
+                        </div>
+                    </div>
+                    <div style="display:flex; gap:0.5rem;">
+                        <button class="btn btn-outline" style="height:32px; padding:0 0.75rem;" aria-label="Download"><i class="fa-solid fa-download"></i></button>
+                        <button class="btn btn-outline" style="height:32px; padding:0 0.75rem;"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                    </div>
+                </div>
+                <!-- Doc 2 -->
+                <div class="document-item">
+                    <div class="document-info">
+                        <i class="fa-solid fa-file-excel" style="font-size:1.5rem; color:#10b981;"></i>
+                        <div>
+                            <h4 style="margin:0; font-size:1rem;">Vendor_Payments_Raw.xlsx</h4>
+                            <p class="sub-text" style="font-size:0.85rem; margin:0;">Uploaded by You • Oct 20, 2026 • 15.1 MB</p>
+                        </div>
+                    </div>
+                    <div style="display:flex; gap:0.5rem;">
+                        <button class="btn btn-outline" style="height:32px; padding:0 0.75rem;" aria-label="Download"><i class="fa-solid fa-download"></i></button>
+                        <button class="btn btn-outline" style="height:32px; padding:0 0.75rem;"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                    </div>
+                </div>
+                <!-- Doc 3 -->
+                <div class="document-item">
+                    <div class="document-info">
+                        <i class="fa-solid fa-file-word" style="font-size:1.5rem; color:#3b82f6;"></i>
+                        <div>
+                            <h4 style="margin:0; font-size:1rem;">Subpoena_Draft_v2.docx</h4>
+                            <p class="sub-text" style="font-size:0.85rem; margin:0;">Uploaded by Legal Counsel • Oct 18, 2026 • 850 KB</p>
+                        </div>
+                    </div>
+                    <div style="display:flex; gap:0.5rem;">
+                        <button class="btn btn-outline" style="height:32px; padding:0 0.75rem;" aria-label="Download"><i class="fa-solid fa-download"></i></button>
+                        <button class="btn btn-outline" style="height:32px; padding:0 0.75rem;"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                    </div>
+                </div>
+            </div>
+            
+        </main>
+    </div>
+
+    <!-- Script to handle dashboard specific toggles -->
+    <script src="js/script.js"></script>
+</body>
+</html>

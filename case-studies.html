@@ -3,16 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/jpeg" href="https://images.unsplash.com/photo-1589829085413-56de8ae18c73?auto=format&fit=crop&q=80&w=32&h=32">
+    <link rel="icon" type="image/png" href="img/logo.png">
     <title>Case Studies | Forensic Accounting</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* Centering the 4th card in Case Studies (3-column layout) */
-        @media (min-width: 1025px) {
-            .card-grid > .card:nth-child(4) {
-                grid-column: 2;
-            }
+        .cases-flex-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+        }
+        .cases-flex-container > .card {
+            flex: 1 1 300px;
+            max-width: 380px;
         }
     </style>
 </head>
@@ -40,7 +44,7 @@
                 <li><a href="resources.html" class="nav-link">Resources</a></li>
                 <li><a href="contact.html" class="nav-link">Contact</a></li>
                 <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
-                <li><a href="login.html" class="nav-link">Login</a></li>
+
             </ul>
             <div class="header-actions">
                 <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Dark Mode">
@@ -49,7 +53,7 @@
                 <button id="rtl-toggle" class="theme-toggle-btn" aria-label="Toggle RTL Mode">
                     <i class="fa-solid fa-language"></i>
                 </button>
-                <a href="contact.html" class="btn">Consultation</a>
+                <a href="login.html" class="btn">Consultation</a>
                 <button id="hamburger" class="hamburger"><span></span><span></span><span></span></button>
             </div>
         </div>
@@ -67,12 +71,12 @@
             <li><a href="resources.html" class="nav-link">Resources</a></li>
             <li><a href="contact.html" class="nav-link">Contact</a></li>
             <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
-            <li><a href="login.html" class="nav-link">Login</a></li>
-            <li><a href="contact.html" class="btn" style="margin-top: 1rem; width: 100%;">Consultation</a></li>
+
+            <li><a href="login.html" class="btn" style="margin-top: 1rem; width: 100%;">Consultation</a></li>
         </ul>
     </div>
 
-    <section class="hero" style="min-height: 50vh; background-image: linear-gradient(rgba(10, 25, 47, 0.8), rgba(10, 25, 47, 0.9)), url('img/case-studies-hero.png');">
+    <section class="hero" style="min-height: 50vh; background-image: linear-gradient(rgba(10, 25, 47, 0.8), rgba(10, 25, 47, 0.9)), url('img/case_studies_hero.png');">
         <div class="container text-center">
             <h1>Success Stories & Precedents</h1>
             <p>Real-world examples of how our investigative precision changed the outcome of high-stakes disputes.</p>
@@ -82,11 +86,11 @@
     <!-- Case Studies List -->
     <section class="bg-alt">
         <div class="container">
-            <div class="card-grid">
+            <div class="cases-flex-container">
                 <!-- Case 1 -->
                 <div class="card">
                     <div class="card-body">
-                        <div class="card-image-wrap" style="text-align: center; margin-bottom: 1.5rem;"><img src="img/corporate_embezzlement_case_1775282361527.png" alt="Corporate Embezzlement" style="width: 100%; height: 240px; border-radius: 8px; object-fit: cover; margin-bottom: 1rem; margin: 0 auto; box-shadow: 0 4px 6px rgba(0,0,0,0.1);"></div>
+                        <div class="card-image-wrap" style="text-align: center; margin-bottom: 1.5rem;"><img src="img/fraud_investigation.png" alt="Corporate Embezzlement" style="width: 100%; height: 240px; border-radius: 8px; object-fit: cover; margin-bottom: 1rem; margin: 0 auto; box-shadow: 0 4px 6px rgba(0,0,0,0.1);"></div>
                         <h3 class="card-title">Corporate Embezzlement</h3>
                         <p class="sub-text" style="font-size: 0.85rem;">Fraud Investigation Case</p>
                         <p class="card-text">Uncovered a sophisticated invoicing scheme resulting in the recovery of $4.2M over a period of 5 years.</p>
@@ -99,7 +103,7 @@
                 <!-- Case 2 -->
                 <div class="card">
                     <div class="card-body">
-                        <div class="card-image-wrap" style="text-align: center; margin-bottom: 1.5rem;"><img src="img/partnership_dispute_case_1775282408041.png" alt="Partnership Shareholder Dispute" style="width: 100%; height: 240px; border-radius: 8px; object-fit: cover; margin-bottom: 1rem; margin: 0 auto; box-shadow: 0 4px 6px rgba(0,0,0,0.1);"></div>
+                        <div class="card-image-wrap" style="text-align: center; margin-bottom: 1.5rem;"><img src="img/business_valuation.png" alt="Partnership Shareholder Dispute" style="width: 100%; height: 240px; border-radius: 8px; object-fit: cover; margin-bottom: 1rem; margin: 0 auto; box-shadow: 0 4px 6px rgba(0,0,0,0.1);"></div>
                         <h3 class="card-title">Partnership Shareholder Dispute</h3>
                         <p class="sub-text" style="font-size: 0.85rem;">Dispute Resolution Case</p>
                         <p class="card-text">Re-calculated business valuation following suppressed revenues by managing partner, securing an equitable $15M buyout.</p>
@@ -112,7 +116,7 @@
                 <!-- Case 3 -->
                 <div class="card">
                     <div class="card-body">
-                        <div class="card-image-wrap" style="text-align: center; margin-bottom: 1.5rem;"><img src="img/offshore_diversion_case_1775282458594.png" alt="Offshore Diversion" style="width: 100%; height: 240px; border-radius: 8px; object-fit: cover; margin-bottom: 1rem; margin: 0 auto; box-shadow: 0 4px 6px rgba(0,0,0,0.1);"></div>
+                        <div class="card-image-wrap" style="text-align: center; margin-bottom: 1.5rem;"><img src="img/asset_tracing.png" alt="Offshore Diversion" style="width: 100%; height: 240px; border-radius: 8px; object-fit: cover; margin-bottom: 1rem; margin: 0 auto; box-shadow: 0 4px 6px rgba(0,0,0,0.1);"></div>
                         <h3 class="card-title">Offshore Diversion</h3>
                         <p class="sub-text" style="font-size: 0.85rem;">Asset Recovery Success</p>
                         <p class="card-text">Traced complex cryptocurrency transactions to physical assets in three offshore jurisdictions, resulting in seizure.</p>
@@ -125,7 +129,7 @@
                 <!-- Case 4 -->
                 <div class="card">
                     <div class="card-body">
-                        <div class="card-image-wrap" style="text-align: center; margin-bottom: 1.5rem;"><img src="img/insurance_claim_case_1775282488847.png" alt="Insurance Claim Deflation" style="width: 100%; height: 240px; border-radius: 8px; object-fit: cover; margin-bottom: 1rem; margin: 0 auto; box-shadow: 0 4px 6px rgba(0,0,0,0.1);"></div>
+                        <div class="card-image-wrap" style="text-align: center; margin-bottom: 1.5rem;"><img src="img/insurance_claims.png" alt="Insurance Claim Deflation" style="width: 100%; height: 240px; border-radius: 8px; object-fit: cover; margin-bottom: 1rem; margin: 0 auto; box-shadow: 0 4px 6px rgba(0,0,0,0.1);"></div>
                         <h3 class="card-title">Insurance Claim Deflation</h3>
                         <p class="sub-text" style="font-size: 0.85rem;">Financial Misconduct Analysis</p>
                         <p class="card-text">Defended against an inflated business interruption claim by proving systematic overstatement of pre-incident projections.</p>
@@ -172,7 +176,7 @@
                     <p class="sub-text">By mapping complex relational databases, we turn terabytes of unstructured corporate confusion into a clean, chronological narrative of fraud that juries understand.</p>
                 </div>
                 <div style="flex: 1; min-width: 300px;">
-                    <img src="img/investigation_methods_case_1775282539169.png" alt="Investigation Methodology" style="border-radius: 8px; box-shadow: var(--shadow-lg);">
+                    <img src="img/industry_financial.png" alt="Investigation Methodology" style="border-radius: 8px; box-shadow: var(--shadow-lg);">
                 </div>
             </div>
         </div>
@@ -194,7 +198,7 @@
         <div class="container">
             <h2 style="color: #fff; margin-bottom: 1.5rem;">Secure the Evidence You Need</h2>
             <p style="color: #cbd5e1; max-width: 600px; margin: 0 auto 2rem;">Every day counts when financial misconduct occurs. Let us outline a discreet, targeted investigation plan.</p>
-            <a href="contact.html" class="btn" style="background-color: var(--secondary-color); color: #fff;">Start Your Case Review</a>
+            <a href="contact.html" class="btn" style="background-color: var(--secondary-color); color: var(--primary-color);">Start Your Case Review</a>
         </div>
     </section>
 
@@ -211,9 +215,9 @@
                     <p class="footer-text">Premier forensic accounting firm dedicated to uncovering truth in complex financial matters.</p>
                     <!-- Social Links (Rule 7) -->
                     <div class="social-links">
-                        <a href="#" aria-label="LinkedIn"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn" style="width:20px;"></a>
-                        <a href="#" aria-label="Twitter"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/twitter/twitter-original.svg" alt="Twitter" style="width:20px;"></a>
-                        <a href="#" aria-label="Facebook"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/facebook/facebook-original.svg" alt="Facebook" style="width:20px;"></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
                     </div>
                 </div>
 

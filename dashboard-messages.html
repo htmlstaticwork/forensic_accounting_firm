@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="img/logo.png">
+    <title>Secure Messages | TruthSeekers Portal</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="dashboard-page">
+
+    <!-- Dashboard Sidebar -->
+    <aside class="dashboard-sidebar" id="dashboard-sidebar">
+        <div class="sidebar-header">
+            <a href="index.html" class="brand-logo" style="margin: 0;">
+                <img src="img/logo.png" alt="Logo">
+                <span>TruthSeekers</span>
+            </a>
+        </div>
+        
+        <nav class="sidebar-nav">
+            <a href="dashboard.html" class="sidebar-link"><i class="fa-solid fa-gauge"></i> Overview</a>
+            <a href="dashboard-cases.html" class="sidebar-link"><i class="fa-solid fa-folder-open"></i> Cases</a>
+            <a href="dashboard-documents.html" class="sidebar-link"><i class="fa-solid fa-file-invoice"></i> Documents</a>
+            <a href="dashboard-messages.html" class="sidebar-link active"><i class="fa-solid fa-message"></i> Messages <span style="background:var(--secondary-color); color:var(--primary-color); border-radius:50%; width:20px; height:20px; display:inline-flex; align-items:center; justify-content:center; font-size:12px; font-weight:700; margin-left:auto;">2</span></a>
+            <a href="dashboard-settings.html" class="sidebar-link"><i class="fa-solid fa-gear"></i> Settings</a>
+        </nav>
+        
+        <div class="sidebar-footer">
+            <a href="index.html" class="sidebar-link" style="padding: 0; color: #f87171;"><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a>
+        </div>
+    </aside>
+
+    <div class="dashboard-main">
+        <!-- Dashboard Header -->
+        <header class="dashboard-header">
+            <div style="display: flex; align-items: center; gap: 1rem;">
+                <button id="mobile-sidebar-toggle" class="mobile-sidebar-toggle"><i class="fa-solid fa-bars"></i></button>
+                <h3 style="margin:0;">Secure Communications</h3>
+            </div>
+            
+            <div style="display: flex; align-items: center; gap: 1rem;">
+                <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Dark Mode" style="font-size: 1.25rem; background:none; border:none; cursor:pointer; color:var(--text-main);">
+                    <i class="fa-solid fa-circle-half-stroke"></i>
+                </button>
+                <button id="rtl-toggle" class="theme-toggle-btn" aria-label="Toggle RTL Mode" style="font-size: 1.25rem; background:none; border:none; cursor:pointer; color:var(--text-main);">
+                    <i class="fa-solid fa-language"></i>
+                </button>
+                
+                <div style="width: 40px; height: 40px; border-radius: 50%; background: var(--secondary-color); color: var(--primary-color); display: flex; align-items: center; justify-content: center; font-weight: 700;">JD</div>
+            </div>
+        </header>
+
+        <!-- Dashboard Content -->
+        <main class="dashboard-content container" style="max-width: 100%; width:100%; margin:0;">
+            
+            <div class="messages-container">
+                <!-- Contacts Pane -->
+                <div class="contacts-pane">
+                    <div style="padding: 1rem; border-bottom: 1px solid var(--border-color); background: var(--bg-color);">
+                        <h4 style="margin:0;">Conversations</h4>
+                    </div>
+                    
+                    <div style="overflow-y: auto; flex-grow: 1;">
+                        <!-- Contact 1 -->
+                        <div class="contact-item active">
+                            <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.25rem;">
+                                <h4 style="margin:0; font-size:1rem;">Sarah Jenkins</h4>
+                                <span style="font-size: 0.75rem; color: var(--secondary-color); font-weight: 600;">2 New</span>
+                            </div>
+                            <p class="sub-text" style="font-size:0.85rem; margin:0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: var(--text-main);">Did the compliance team approve the latest data extraction?</p>
+                        </div>
+                        
+                        <!-- Contact 2 -->
+                        <div class="contact-item">
+                            <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.25rem;">
+                                <h4 style="margin:0; font-size:1rem;">Legal Team (Group)</h4>
+                                <span style="font-size: 0.75rem; color: var(--text-sub);">Yesterday</span>
+                            </div>
+                            <p class="sub-text" style="font-size:0.85rem; margin:0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Please review the attached subpoena draft.</p>
+                        </div>
+
+                        <!-- Contact 3 -->
+                        <div class="contact-item">
+                            <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.25rem;">
+                                <h4 style="margin:0; font-size:1rem;">Michael Ross</h4>
+                                <span style="font-size: 0.75rem; color: var(--text-sub);">Oct 20</span>
+                            </div>
+                            <p class="sub-text" style="font-size:0.85rem; margin:0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">The valuation report is finalized and in the vault.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Active Chat Pane -->
+                <div class="chat-pane">
+                    <!-- Chat Header -->
+                    <div style="padding: 1rem 1.5rem; border-bottom: 1px solid var(--border-color); background: var(--bg-color); display: flex; align-items: center; justify-content: space-between;">
+                        <div>
+                            <h3 style="margin:0; font-size: 1.1rem;">Sarah Jenkins</h3>
+                            <p class="sub-text" style="margin:0; font-size: 0.85rem;">Lead Investigator - Case #TS-9942</p>
+                        </div>
+                        <div style="display: flex; gap: 1rem;">
+                            <button class="btn btn-outline" style="height:32px; padding:0 0.75rem;" aria-label="Call"><i class="fa-solid fa-phone"></i></button>
+                            <button class="btn btn-outline" style="height:32px; padding:0 0.75rem;" aria-label="More"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                        </div>
+                    </div>
+
+                    <!-- Chat Messages -->
+                    <div class="chat-messages">
+                        <div style="text-align: center; margin-bottom: 1rem;">
+                            <span style="font-size: 0.75rem; color: var(--text-sub); background: var(--bg-color); padding: 0.25rem 0.75rem; border-radius: 12px;">Today</span>
+                        </div>
+
+                        <div class="chat-message received">
+                            <p style="margin:0; font-size: 0.95rem;">Hello John. We've successfully extracted the raw vendor logs from Q3. I'm having our analysts run Benford's Law tests on them now.</p>
+                            <div style="font-size:0.7rem; color:var(--text-sub); text-align:right; margin-top:0.5rem;">09:15 AM</div>
+                        </div>
+
+                        <div class="chat-message sent">
+                            <p style="margin:0; font-size: 0.95rem;">Excellent. Let me know if you uncover any immediate anomalies that require counsel's attention.</p>
+                            <div style="font-size:0.7rem; color:rgba(255,255,255,0.7); text-align:right; margin-top:0.5rem;">09:42 AM</div>
+                        </div>
+
+                        <div class="chat-message received">
+                            <p style="margin:0; font-size: 0.95rem;">Will do. Also, did the compliance team approve the latest data extraction scope for Q4?</p>
+                            <div style="font-size:0.7rem; color:var(--text-sub); text-align:right; margin-top:0.5rem;">10:05 AM</div>
+                        </div>
+                        
+                        <div class="chat-message received">
+                            <p style="margin:0; font-size: 0.95rem;">We'll need that before Friday to stay on the court-mandated timeline.</p>
+                            <div style="font-size:0.7rem; color:var(--text-sub); text-align:right; margin-top:0.5rem;">10:06 AM</div>
+                        </div>
+                    </div>
+
+                    <!-- Chat Input -->
+                    <div class="chat-input-area">
+                        <button class="btn btn-outline" style="padding:0 1rem;" aria-label="Attach File"><i class="fa-solid fa-paperclip"></i></button>
+                        <input type="text" class="chat-input" placeholder="Type a secure message...">
+                        <button class="btn" style="padding:0 1.25rem;" aria-label="Send"><i class="fa-solid fa-paper-plane"></i></button>
+                    </div>
+                </div>
+            </div>
+            
+        </main>
+    </div>
+
+    <!-- Script to handle dashboard specific toggles -->
+    <script src="js/script.js"></script>
+</body>
+</html>

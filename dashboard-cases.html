@@ -4,17 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="img/logo.png">
-    <title>Client Portal | TruthSeekers</title>
+    <title>Cases | TruthSeekers Portal</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/dashboard.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body class="dashboard-page">
 
-    <!-- Dashboard Sidebar (Rule 49: Hamburger in mobile, Rule 11: Active item distinguished) -->
+    <!-- Dashboard Sidebar -->
     <aside class="dashboard-sidebar" id="dashboard-sidebar">
         <div class="sidebar-header">
-            <!-- Logo consistent, clickable (Rule 16, 22) -->
             <a href="index.html" class="brand-logo" style="margin: 0;">
                 <img src="img/logo.png" alt="Logo">
                 <span>TruthSeekers</span>
@@ -22,8 +21,8 @@
         </div>
         
         <nav class="sidebar-nav">
-            <a href="dashboard.html" class="sidebar-link active"><i class="fa-solid fa-gauge"></i> Overview</a>
-            <a href="dashboard-cases.html" class="sidebar-link"><i class="fa-solid fa-folder-open"></i> Cases</a>
+            <a href="dashboard.html" class="sidebar-link"><i class="fa-solid fa-gauge"></i> Overview</a>
+            <a href="dashboard-cases.html" class="sidebar-link active"><i class="fa-solid fa-folder-open"></i> Cases</a>
             <a href="dashboard-documents.html" class="sidebar-link"><i class="fa-solid fa-file-invoice"></i> Documents</a>
             <a href="dashboard-messages.html" class="sidebar-link"><i class="fa-solid fa-message"></i> Messages <span style="background:var(--secondary-color); color:var(--primary-color); border-radius:50%; width:20px; height:20px; display:inline-flex; align-items:center; justify-content:center; font-size:12px; font-weight:700; margin-left:auto;">2</span></a>
             <a href="dashboard-settings.html" class="sidebar-link"><i class="fa-solid fa-gear"></i> Settings</a>
@@ -39,11 +38,10 @@
         <header class="dashboard-header">
             <div style="display: flex; align-items: center; gap: 1rem;">
                 <button id="mobile-sidebar-toggle" class="mobile-sidebar-toggle"><i class="fa-solid fa-bars"></i></button>
-                <h3 style="margin:0;">Dashboard Overview</h3>
+                <h3 style="margin:0;">Active Investigations</h3>
             </div>
             
             <div style="display: flex; align-items: center; gap: 1rem;">
-                <!-- Theme & RTL Toggles inside Dashboard -->
                 <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Dark Mode" style="font-size: 1.25rem; background:none; border:none; cursor:pointer; color:var(--text-main);">
                     <i class="fa-solid fa-circle-half-stroke"></i>
                 </button>
@@ -51,7 +49,6 @@
                     <i class="fa-solid fa-language"></i>
                 </button>
                 
-                <!-- Rule 49: Filter option accessed via icon, not always visible -->
                 <div class="filter-dropdown" id="filter-dropdown">
                     <button id="filter-btn" style="background:none; border:none; cursor:pointer; font-size:1.25rem; color:var(--text-main); position:relative; padding:0.5rem;"><i class="fa-solid fa-filter"></i></button>
                     <div class="filter-dropdown-content">
@@ -71,64 +68,70 @@
 
         <!-- Dashboard Content -->
         <main class="dashboard-content container" style="max-width: 100%; width:100%; margin:0;">
-            <!-- Welcome message -->
-            <div style="margin-bottom: 2rem;">
-                <h2>Welcome back, John</h2>
-                <p class="sub-text">You have 1 active case and 2 unread secure messages.</p>
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 2rem; flex-wrap:wrap; gap:1rem;">
+                <h2>Your Cases</h2>
+                <button class="btn"><i class="fa-solid fa-plus" style="margin-right:8px;"></i> Request New Case</button>
             </div>
 
-            <!-- Stats grid -->
-            <div class="card-grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); margin-bottom: 2rem;">
-                <div class="card" style="padding: 1.5rem; display:flex; flex-direction:row; justify-content:space-between; align-items:center;">
-                    <div>
-                        <p class="sub-text" style="font-size:0.85rem; margin-bottom:0.25rem;">Total Cases</p>
-                        <h3 style="margin:0;">3</h3>
-                    </div>
-                    <i class="fa-solid fa-folder-open" style="font-size:2rem; color:var(--secondary-color);"></i>
-                </div>
-                <div class="card" style="padding: 1.5rem; display:flex; flex-direction:row; justify-content:space-between; align-items:center;">
-                    <div>
-                        <p class="sub-text" style="font-size:0.85rem; margin-bottom:0.25rem;">Active Investigations</p>
-                        <h3 style="margin:0;">1</h3>
-                    </div>
-                    <i class="fa-solid fa-magnifying-glass-chart" style="font-size:2rem; color:var(--secondary-color);"></i>
-                </div>
-                <div class="card" style="padding: 1.5rem; display:flex; flex-direction:row; justify-content:space-between; align-items:center;">
-                    <div>
-                        <p class="sub-text" style="font-size:0.85rem; margin-bottom:0.25rem;">New Documents</p>
-                        <h3 style="margin:0;">5</h3>
-                    </div>
-                    <i class="fa-solid fa-file-shield" style="font-size:2rem; color:var(--secondary-color);"></i>
+            <div class="card" style="padding: 0; overflow:hidden;">
+                <div class="table-responsive">
+                    <table class="dashboard-table">
+                        <thead>
+                            <tr>
+                                <th>Case ID</th>
+                                <th>Title</th>
+                                <th>Type</th>
+                                <th>Lead Investigator</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="font-weight: 600;">#TS-9942</td>
+                                <td>Corporate Embezzlement Audit</td>
+                                <td>Fraud Investigation</td>
+                                <td>Sarah Jenkins</td>
+                                <td>
+                                    <span style="display:inline-block; padding:0.25rem 0.75rem; border-radius:12px; background:rgba(212, 175, 55, 0.2); color:var(--secondary-color); font-size:0.85rem; font-weight:600;">Data Extraction</span>
+                                </td>
+                                <td>
+                                    <button class="btn btn-outline" style="height:32px; padding:0 0.75rem; font-size:0.85rem;">View Vault</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="font-weight: 600;">#TS-9811</td>
+                                <td>Partnership Buyout Valuation</td>
+                                <td>Business Valuation</td>
+                                <td>Michael Ross</td>
+                                <td>
+                                    <span style="display:inline-block; padding:0.25rem 0.75rem; border-radius:12px; background:rgba(52, 211, 153, 0.2); color:#34d399; font-size:0.85rem; font-weight:600;">Completed</span>
+                                </td>
+                                <td>
+                                    <button class="btn btn-outline" style="height:32px; padding:0 0.75rem; font-size:0.85rem;">Final Report</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="font-weight: 600;">#TS-9650</td>
+                                <td>Divorce Proceeding - Asset Tracing</td>
+                                <td>Litigation Support</td>
+                                <td>Robert Hughes</td>
+                                <td>
+                                    <span style="display:inline-block; padding:0.25rem 0.75rem; border-radius:12px; background:rgba(52, 211, 153, 0.2); color:#34d399; font-size:0.85rem; font-weight:600;">Completed</span>
+                                </td>
+                                <td>
+                                    <button class="btn btn-outline" style="height:32px; padding:0 0.75rem; font-size:0.85rem;">Final Report</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
-
-            <!-- Active Case Info -->
-            <div class="card" style="margin-bottom: 2rem; border-left: 4px solid var(--secondary-color);">
-                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem; flex-wrap:wrap; gap:1rem;">
-                    <div>
-                        <h3 style="margin-bottom:0.25rem;">Case #TS-9942: Corporate Embezzlement</h3>
-                        <p class="sub-text" style="margin:0;">Status: <span style="font-weight:700; color:var(--secondary-color);">Data Extraction Phase</span></p>
-                    </div>
-                    <button class="btn btn-outline" style="height:40px;">View Vault</button>
-                </div>
-                <!-- Rule 47: Reduce size of bar graphs (Replacing with a slim progress bar) -->
-                <div style="background:var(--bg-color); height:8px; border-radius:4px; overflow:hidden; margin: 1.5rem 0 0.5rem;">
-                    <div style="background:var(--secondary-color); width: 45%; height:100%;"></div>
-                </div>
-                <p class="sub-text" style="font-size:0.85rem; text-align:right; margin:0;">45% Complete</p>
-            </div>
+            
         </main>
     </div>
 
     <!-- Script to handle dashboard specific toggles -->
-    <button id="back-to-top" class="back-to-top" aria-label="Back to Top">
-        <i class="fa-solid fa-arrow-up"></i>
-    </button>
     <script src="js/script.js"></script>
 </body>
 </html>
-
-
-
-
-
