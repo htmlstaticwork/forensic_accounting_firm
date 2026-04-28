@@ -773,9 +773,12 @@ body {
 
   #services-preview .card-grid .card:last-child:nth-child(odd),
   #testimonials .card-grid .card:last-child:nth-child(odd),
-  #problem-solution .card-grid .card:last-child:nth-child(odd) {
+  #problem-solution .card-grid .card:last-child:nth-child(odd),
+  #core-values .card-grid .card:last-child:nth-child(odd) {
     grid-column: auto;
     max-width: none;
+    width: 100%;
+    justify-self: stretch;
   }
 }
 
