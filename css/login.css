@@ -144,3 +144,9 @@ body.login-page {
         grid-template-columns: 1fr;
     }
 }
+
+@media (max-width: 360px) {
+    body.login-page {
+        padding-top: 4rem;
+    }
+}

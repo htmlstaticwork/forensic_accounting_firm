@@ -897,6 +897,16 @@ body {
   }
 }
 
+/* Toggles in Mobile Nav */
+.mobile-nav-toggles {
+  display: none;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border-color);
+  justify-content: center;
+}
+
 /* =========================================================================
    MEDIA QUERIES
    ========================================================================= */
@@ -984,16 +994,6 @@ body {
     margin-right: -5px;
     /* Pull slightly back into view if needed */
   }
-}
-
-/* Toggles in Mobile Nav */
-.mobile-nav-toggles {
-  display: none;
-  gap: 1rem;
-  margin-top: 1.5rem;
-  padding-top: 1.5rem;
-  border-top: 1px solid var(--border-color);
-  justify-content: center;
 }
 
 
@@ -1140,6 +1140,13 @@ body {
   .auth-controls {
     top: 1rem;
     right: 1rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .auth-controls {
+    top: 15px;
+    right: 15px;
   }
 }
 
