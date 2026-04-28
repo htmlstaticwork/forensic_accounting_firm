@@ -135,3 +135,12 @@ body.login-page {
 }
 .login-divider:not(:empty)::before { margin-right: .5em; }
 .login-divider:not(:empty)::after { margin-left: .5em; }
+
+@media (max-width: 480px) {
+    .login-card {
+        padding: 2rem 1.5rem;
+    }
+    .social-login-grid {
+        grid-template-columns: 1fr;
+    }
+}

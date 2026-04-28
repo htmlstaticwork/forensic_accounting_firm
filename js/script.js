@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
     /* ==============================================
        THEME TOGGLE
        ============================================== */
-    const themeBtn = document.getElementById("theme-toggle");
+    const themeBtns = document.querySelectorAll(".theme-toggle");
     
     // Check saved theme or system preference
     const currentTheme = localStorage.getItem("theme");
@@ -15,8 +15,8 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    if (themeBtn) {
-        themeBtn.addEventListener("click", () => {
+    themeBtns.forEach(btn => {
+        btn.addEventListener("click", () => {
             let theme = document.documentElement.getAttribute("data-theme");
             if (theme === "dark") {
                 document.documentElement.removeAttribute("data-theme");
@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 localStorage.setItem("theme", "dark");
             }
         });
-    }
+    });
 
     /* ==============================================
        DASHBOARD SIDEBAR (Rule 49)
@@ -69,15 +69,15 @@ document.addEventListener("DOMContentLoaded", () => {
     /* ==============================================
        RTL TOGGLE
        ============================================== */
-    const rtlBtn = document.getElementById("rtl-toggle");
+    const rtlBtns = document.querySelectorAll(".rtl-toggle");
     const currentRtl = localStorage.getItem("rtl");
 
     if (currentRtl === "enabled") {
         document.documentElement.setAttribute("dir", "rtl");
     }
 
-    if (rtlBtn) {
-        rtlBtn.addEventListener("click", () => {
+    rtlBtns.forEach(btn => {
+        btn.addEventListener("click", () => {
             const isRtl = document.documentElement.getAttribute("dir") === "rtl";
             if (isRtl) {
                 document.documentElement.removeAttribute("dir");
@@ -87,7 +87,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 localStorage.setItem("rtl", "enabled");
             }
         });
-    }
+    });
 
     /* ==============================================
        BACK TO TOP

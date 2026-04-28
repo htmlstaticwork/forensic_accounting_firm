@@ -42,11 +42,10 @@
             </ul>
 
             <div class="header-actions">
-                <!-- RTL toggle requested in related previous contexts but explicitly not in 49 list, I'll add if we want -->
-                <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Dark Mode">
+                <button class="theme-toggle-btn theme-toggle" aria-label="Toggle Dark Mode">
                     <i class="fa-solid fa-circle-half-stroke"></i>
                 </button>
-                <button id="rtl-toggle" class="theme-toggle-btn" aria-label="Toggle RTL Mode">
+                <button class="theme-toggle-btn rtl-toggle" aria-label="Toggle RTL Mode">
                     <span class="rtl-toggle-text">RTL</span>
                 </button>
                 <a href="login.html" class="btn">Consultation</a>
@@ -77,6 +76,14 @@
 
             <li><a href="login.html" class="btn" style="margin-top: 1rem; width: 100%;">Consultation</a></li>
         </ul>
+        <div class="mobile-nav-toggles">
+            <button class="theme-toggle-btn theme-toggle" aria-label="Toggle Dark Mode">
+                <i class="fa-solid fa-circle-half-stroke"></i> Theme
+            </button>
+            <button class="theme-toggle-btn rtl-toggle" aria-label="Toggle RTL Mode">
+                <span class="rtl-toggle-text">RTL</span> Layout
+            </button>
+        </div>
     </div>  
     
     <!-- ==========================================
